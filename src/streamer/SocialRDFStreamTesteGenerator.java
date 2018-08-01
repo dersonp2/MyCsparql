@@ -1,5 +1,6 @@
 package streamer;
 
+import Csparql.StreamCsparql;
 import eu.larkc.csparql.cep.api.RdfQuadruple;
 import eu.larkc.csparql.cep.api.RdfStream;
 import org.slf4j.Logger;
@@ -40,7 +41,8 @@ public class SocialRDFStreamTesteGenerator extends RdfStream implements Runnable
                 final RdfQuadruple rdfQuadruple2 = new RdfQuadruple(streamIri+"/user" + this.c+i,
                         "http://mycsparql.lsdi/likes", "http://mycsparql.lsdi/Obj" + this.c, System.currentTimeMillis());
                 this.put(rdfQuadruple2);
-                //         logger.info(q1.toString());
+                StreamCsparql.getInstance().setStream(rdfQuadruple2);
+                    logger.info(rdfQuadruple2.toString());
 
                 try {
                     Thread.sleep(500);
@@ -48,6 +50,7 @@ public class SocialRDFStreamTesteGenerator extends RdfStream implements Runnable
                     e.printStackTrace();
                 }
                 ct++;
+
             }//For
 
             if(c%10==0) logger.info(ct+ " triplas transmitidas até agora");

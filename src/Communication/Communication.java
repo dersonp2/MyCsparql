@@ -3,6 +3,7 @@ package Communication;
 import ConfigLog.ConfigLog;
 import Csparql.QueryCsparql;
 import Csparql.StreamCsparql;
+import Model.ModelRDFs;
 import Model.Query;
 import Model.SensorDataExtended;
 import Start.StartBroker;
@@ -12,11 +13,13 @@ import org.eclipse.paho.client.mqttv3.*;
 import org.slf4j.Logger;
 
 
-public class Communication {
+public class Communication{
     //Json
     private Gson gson = null;
     //Mqtt
     private static MqttClient client;
+    private static String TOPIC_STREAM = "Stream";
+    private static String TOPIC_QUERY = "QueryCSparql";
     //Logger
     private Logger logger = null;
 
@@ -25,68 +28,54 @@ public class Communication {
         client = StartBroker.getInstance().Connection("SSD");
     }
 
-    //Subscreve ao topico de consulta e encaminha para ResponseQuery
-    public void subQueryTopic(String TOPIC_QUERY) {
+    public void start() {
         connect();
         try {
             client.subscribe(TOPIC_QUERY, 2);
-            client.setCallback(new MqttCallback() {
-                @Override
-                public void connectionLost(Throwable throwable) {
-                    logger.error("connectionLost");
-                }
-
-                @Override
-                public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-                    logger.info("Recebeu mensagem no topico: "+TOPIC_QUERY);
-                    gson = new Gson();
-                    String mgson = new String(mqttMessage.getPayload());
-                    Query query = gson.fromJson(mgson, Query.class);
-                    new QueryCsparql(query);
-                }
-
-                @Override
-                public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
-                    logger.info("deliveryComplete");
-
-                }
-            });
-            logger.info("Subscreveu no tópico: "+TOPIC_QUERY);
-        } catch (MqttException e) {
-            e.printStackTrace();
-            System.out.println("SubQueryStream - Erro ao subscrever");
-        }
-    }
-
-    //Subscreve ao topico de consulta e encaminha para StreamCsparql
-    public void subStreamTopic(String TOPIC_STREAM) {
-        connect();
-        try {
+            logger.info("Subscreveu no tópico: " + TOPIC_QUERY);
             client.subscribe(TOPIC_STREAM, 2);
-            logger.info("Subscreveu no tópico: "+TOPIC_STREAM);
+            logger.info("Subscreveu no tópico: " + TOPIC_STREAM);
             client.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable throwable) {
+                    logger.info("connectionLost");
                 }
 
                 @Override
                 public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-                    logger.info("Recebeu mensagem no topico: "+TOPIC_STREAM);
-                    String mStream = new String(mqttMessage.getPayload());
-                    SensorDataExtended sensorDataExtended = gson.fromJson(mStream, SensorDataExtended.class);
-                    RdfQuadruple[] rdfQuadruples = sensorDataExtended.getRdfQuadruple();
-                    for (RdfQuadruple rdfQ : rdfQuadruples) {
-                        StreamCsparql.getInstance().setStream(rdfQ);
+                    if (s.equals("QueryCSparql")) {
+                        queryTopic(mqttMessage);
+                    } else {
+                        streamTopic(mqttMessage);
                     }
                 }
                 @Override
                 public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
+                    logger.info("deliveryComplete");
                 }
             });
-
         } catch (MqttException e) {
             e.printStackTrace();
-            System.out.println("SubQueryStream - Erro ao subscrever");
+        }
+    }
+
+    public void queryTopic(MqttMessage mqttMessage) {
+        //System.out.println(s);
+        logger.info("Recebeu mensagem no topico: " + "QueryCsparl");
+        gson = new Gson();
+        String mgson = new String(mqttMessage.getPayload());
+        Query query = gson.fromJson(mgson, Query.class);
+        new QueryCsparql(query);
+    }
+
+    public void streamTopic(MqttMessage mqttMessage) {
+        logger.info("Recebeu mensagem no topico: " + "Stream");
+        gson = new Gson();
+        String mStream = new String(mqttMessage.getPayload());
+        ModelRDFs mRdfs = gson.fromJson(mStream, ModelRDFs.class);
+        RdfQuadruple[] rdfQuadruples = mRdfs.getRdfQuadruple();
+        for (RdfQuadruple rdfQ : rdfQuadruples) {
+            StreamCsparql.getInstance().setStream(rdfQ);
         }
     }
 }

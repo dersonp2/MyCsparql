@@ -7913,3 +7913,21 @@ ERROR 2504 [2018-07-16 13:58:15,076] [main] org.apache.jena.riot  - [line: 1, co
 ERROR 2536 [2018-07-16 13:58:15,108] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Undefined prefix: http
 ERROR 2544 [2018-07-16 13:58:15,116] [main] org.apache.jena.riot  - [line: 1, col: 6 ] Unknown char: /(47;0x002F)
 ERROR 2552 [2018-07-16 13:58:15,124] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [KEYWORD:http]
+ERROR 0 [2018-07-25 15:40:13,066] [main] Start.StartBroker  - Erro ao conectar com o broker - 
+ERROR 65096 [2018-07-27 08:48:16,005] [MQTT Call: SSD] Communication.Communication  - connectionLost
+ERROR 3621 [2018-07-27 10:37:13,733] [MQTT Rec: SSD] Communication.Communication  - connectionLost
+ERROR 15184 [2018-07-31 15:07:19,081] [MQTT Call: SSD] Communication.Communication  - connectionLost
+ERROR 1639 [2018-07-31 15:07:53,432] [MQTT Call: SSD] Communication.Communication  - connectionLost
+ERROR 435 [2018-07-31 15:10:32,862] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 1693 [2018-07-31 15:11:09,218] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 420 [2018-07-31 15:11:37,521] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 2161 [2018-07-31 15:48:00,102] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 35351 [2018-07-31 15:49:35,203] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 75751 [2018-07-31 16:05:29,330] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 65934 [2018-07-31 16:08:45,190] [MQTT Rec: SSD] Communication.Communication  - connectionLost: Conexão perdida (32109) - java.io.EOFException
+ERROR 139586 [2018-07-31 16:11:04,769] [MQTT Rec: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.io.FileNotFoundException: C:\Users\Anderson\AppData\Local\Temp\SSD-tcplsdiufmabr1883\r-1.msg (O sistema não pode encontrar o caminho especificado)
+ERROR 23828 [2018-07-31 16:28:32,004] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 8714 [2018-07-31 16:31:41,219] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 96663 [2018-07-31 16:33:49,167] [MQTT Rec: SSD] Communication.Communication  - connectionLost
+ERROR 5109 [2018-07-31 16:33:54,318] [MQTT Rec: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.io.FileNotFoundException: C:\Users\Anderson\AppData\Local\Temp\SSD-tcplsdiufmabr1883\r-1.msg (O sistema não pode encontrar o caminho especificado)
+ERROR 12569 [2018-07-31 16:40:25,585] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException

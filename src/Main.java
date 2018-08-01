@@ -65,7 +65,7 @@ public class Main {
         query = "REGISTER QUERY UpStreamQuery AS "
                 + "SELECT ?s "
                 + "FROM STREAM <stream1> [RANGE 12s STEP 5s] "
-                + "WHERE { ?s ?o ?ush}";
+                + "WHERE { ?s ?p ?o}";
 
         //rdfStream = new BasicRDFStreamTestGenerator("stream1");
         final RdfQuadruple rdfQuadruple =  new RdfQuadruple("A","B","C  ",System.currentTimeMillis());
@@ -169,7 +169,6 @@ public class Main {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        engine.registerStream(rdfStream);
 
         csparqlQueryResult.addObserver(new ConsoleFormatter());
         try {
@@ -178,7 +177,7 @@ public class Main {
             logger.error(e.getMessage(), e);
         }
         ((SocialRDFStreamTesteGenerator) rdfStream).stop();
-        //engine.unregisterStream(rdfStream.getIRI());
+        engine.unregisterStream(rdfStream.getIRI());
     }
 
     public static void cloudMonitoring() {

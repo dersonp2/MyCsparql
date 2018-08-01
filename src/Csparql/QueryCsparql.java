@@ -18,7 +18,6 @@ import java.util.Observer;
 public class QueryCsparql {
     //Csparql
     private static CsparqlEngine engine = null;
-    private RdfStream rdfStream = null;
     private CsparqlQueryResultProxy csparqlQueryResult;
     //Logger
     private Logger logger;
