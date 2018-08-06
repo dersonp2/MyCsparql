@@ -3,9 +3,8 @@ package Communication;
 import ConfigLog.ConfigLog;
 import Csparql.QueryCsparql;
 import Csparql.StreamCsparql;
-import Model.ModelRDFs;
 import Model.Query;
-import Model.SensorDataExtended;
+import Model.SemanticSensorData;
 import Start.StartBroker;
 import com.google.gson.Gson;
 import eu.larkc.csparql.cep.api.RdfQuadruple;
@@ -43,6 +42,7 @@ public class Communication{
 
                 @Override
                 public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
+                    logger.info("Chegou msg");
                     if (s.equals("QueryCSparql")) {
                         queryTopic(mqttMessage);
                     } else {
@@ -72,8 +72,10 @@ public class Communication{
         logger.info("Recebeu mensagem no topico: " + "Stream");
         gson = new Gson();
         String mStream = new String(mqttMessage.getPayload());
-        ModelRDFs mRdfs = gson.fromJson(mStream, ModelRDFs.class);
-        RdfQuadruple[] rdfQuadruples = mRdfs.getRdfQuadruple();
+        SemanticSensorData data = gson.fromJson(mStream, SemanticSensorData.class);
+        logger.info(": "+data.getSensorName());
+        //ModelRDFs mRdfs = gson.fromJson(mStream, ModelRDFs.class);
+       RdfQuadruple[] rdfQuadruples = data.getRdfQuadruple();
         for (RdfQuadruple rdfQ : rdfQuadruples) {
             StreamCsparql.getInstance().setStream(rdfQ);
         }

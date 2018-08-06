@@ -2,38 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41693c88-97d7-4c30-a446-e1dd7735b7c4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/ModelRDFs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/csparql_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/csparql_debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/csparql_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/csparql_error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/csparql_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/csparql_info.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/ResponseQuery$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/ResponseQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/SubQueryStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/ConfigLog/ConfigLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/ConfigLog/ConfigLog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/StreamCsparql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/StreamCsparql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/LocalMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/SensorData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/SensorDataExtended.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Model/SensorDataExtended.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Observer/Listener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Observer/Observable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Resultados/Formatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Resultados/Formatter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartBroker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartBroker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartCsparql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartCsparql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/TesteBroker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/TesteBroker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/configuracao_log/csparql_log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/BasicRDFStreamTestGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/BasicRDFStreamTestGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/CloudMonitoringRDFStreamTestGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/CloudMonitoringRDFStreamTestGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SensorStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SensorStream.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SocialRDFStreamTesteGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SocialRDFStreamTesteGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Communication/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Communication/Communication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Csparql/QueryCsparql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Csparql/QueryCsparql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Csparql/StreamCsparql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Csparql/StreamCsparql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubQueryStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubQueryStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/SensorDataExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SemanticSensorData.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mycsparql$Main.ic" NAME="Main Coverage Results" MODIFIED="1533063830155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Mycsparql$SubQueryStream__1_.ic" NAME="SubQueryStream (1) Coverage Results" MODIFIED="1532544009899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Mycsparql$Main.ic" NAME="Main Coverage Results" MODIFIED="1533063830155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,57 +69,45 @@
     <expand />
     <select />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1161605702">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="91" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="91" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Communication.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Communication/Communication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2077#2078#0" expanded="true" />
-                <element signature="e#2146#2147#0" expanded="true" />
-                <element signature="e#2603#2604#0" expanded="true" />
-                <element signature="e#2674#2675#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MqttClient.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/MqttClient.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="176" column="16" selection-start-line="176" selection-start-column="16" selection-end-line="176" selection-end-column="16" />
-              <folding>
-                <element signature="e#6285#6286#0" expanded="true" />
-                <element signature="e#6335#6336#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelRDFs.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/ModelRDFs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#174#175#0" expanded="true" />
-                <element signature="e#209#210#0" expanded="true" />
-                <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StreamCsparql.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Csparql/StreamCsparql.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="346">
+              <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,23 +115,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SocialRDFStreamTesteGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/SensorData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-125">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubQueryStream.java" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/SemanticSensorData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SubQueryStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -198,6 +212,8 @@
         <option value="$PROJECT_DIR$/src/Csparql/StreamCsparql.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/SubQueryStream.java" />
+        <option value="$PROJECT_DIR$/src/Model/SensorData.java" />
+        <option value="$PROJECT_DIR$/src/Model/SemanticSensorData.java" />
         <option value="$PROJECT_DIR$/src/Communication/Communication.java" />
       </list>
     </option>
@@ -219,9 +235,6 @@
       <select />
     </treeState>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
@@ -230,74 +243,44 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Mycsparql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mycsparql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mycsparql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mycsparql" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mycsparql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mycsparql" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Communication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mycsparql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mycsparql" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ConfigLog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mycsparql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mycsparql" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
-              <item name="Mycsparql" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
               <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
+              <item name="Communication" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
+              <item name="Model" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView">
+      <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mycsparql" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mycsparql" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.other.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.other.NonAndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="MyCsparql" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyCsparql" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,26 +288,28 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SDPEU-master" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533563419292" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\Model" />
-      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\JsonClass" />
-      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src" />
-      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\configuracao_log" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\Gui" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Model" />
       <recent name="Communication" />
       <recent name="streamer" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\Gui" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\MyCsparql\src\Model" />
+      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\Model" />
+      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\JsonClass" />
+      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src" />
+      <recent name="C:\Users\Anderson\Documents\Desenvolvimento\Mycsparql\src\configuracao_log" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -346,6 +331,9 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Menu (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Gui.Menu" />
@@ -356,10 +344,16 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SubQueryStream (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SubQueryStream" />
       <module name="Mycsparql" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SubQueryStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.ufma.lsdi.mycsparql.Communication.SubQueryStream" />
@@ -370,10 +364,16 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TesteBroker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TesteBroker" />
       <module name="Mycsparql" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
@@ -450,11 +450,12 @@
       <workItem from="1533044758287" duration="81000" />
       <workItem from="1533048700338" duration="5146000" />
       <workItem from="1533062834688" duration="4359000" />
+      <workItem from="1533559568118" duration="3234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183517000" />
+    <option name="totallyTimeSpent" value="186751000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,35 +470,35 @@
     <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32984293" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32984293" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32917964" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.5503634" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.39771548" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32984293" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32984293" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.5508299" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32987553" />
-      <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15884861" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39834026" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32985386" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +555,6 @@
           <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="53" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -657,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/SensorData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JsonClass/Query.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/SensorDataExtended.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -679,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Start/StartBroker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Query.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -693,13 +679,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/System.java" />
     <entry file="file://$PROJECT_DIR$/src/Response/ResponseQuery.java" />
     <entry file="file://$PROJECT_DIR$/src/Csparql/QueryCsparql.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -726,9 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,9 +740,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ModelRDFs.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="67" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/MqttClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Csparql/StreamCsparql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ModelRDFs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#174#175#0" expanded="true" />
@@ -776,73 +787,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SubQueryStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/internal/CommsCallback.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        <state relative-caret-position="354">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/SensorData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="67" selection-end-column="38" />
-          <folding>
-            <element signature="method#socialRDF#0;class#Main#0" />
-            <element signature="method#cloudMonitoring#0;class#Main#0" />
-          </folding>
+        <state relative-caret-position="-125">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/MqttClient.class">
+    <entry file="file://$PROJECT_DIR$/src/Model/SemanticSensorData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="176" column="16" selection-start-line="176" selection-start-column="16" selection-end-line="176" selection-end-column="16" />
-          <folding>
-            <element signature="e#6285#6286#0" expanded="true" />
-            <element signature="e#6335#6336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Csparql/StreamCsparql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Communication/Communication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="346">
+          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2077#2078#0" expanded="true" />
-            <element signature="e#2146#2147#0" expanded="true" />
-            <element signature="e#2603#2604#0" expanded="true" />
-            <element signature="e#2674#2675#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SubQueryStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -910,7 +889,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
