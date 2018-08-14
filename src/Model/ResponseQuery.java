@@ -1,24 +1,26 @@
 package Model;
 
+import eu.larkc.csparql.common.RDFTable;
+
 import java.util.Observable;
 
 public class ResponseQuery {
-    java.util.Observable o;
-    Object arg;
+    private java.util.Observable observable;
+    private RDFTable object;
 
-    public Observable getO() {
-        return o;
+    public Observable getObservable() {
+        return observable;
     }
 
-    public void setO(Observable o) {
-        this.o = o;
+    public void setObservable(Observable observable) {
+        this.observable = observable;
     }
 
-    public Object getArg() {
-        return arg;
+    public RDFTable getObject() {
+        return object;
     }
 
-    public void setArg(Object arg) {
-        this.arg = arg;
+    public void setObject(RDFTable object) {
+        this.object = object;
     }
 }

@@ -5,6 +5,7 @@ import Model.ResponseQuery;
 import Start.StartBroker;
 import Start.StartCsparql;
 import ConfigLog.ConfigLog;
+import Teste.ReceiverResult;
 import com.google.gson.Gson;
 import eu.larkc.csparql.cep.api.RdfStream;
 import eu.larkc.csparql.common.RDFTable;
@@ -62,7 +63,24 @@ public class QueryCsparql {
             csparqlQueryResult.addObserver(new Observer() {
                 @Override
                 public void update(java.util.Observable o, Object arg) {
-                    pubResponseQuery(o, arg);
+
+                    RDFTable q = (RDFTable) arg;
+                    RDFTable q1 = new RDFTable() ;
+                    q1.add(new RDFTuple());
+                    System.out.println();
+                    System.out.println("-------" + q.size() + " results at SystemTime=[" + System.currentTimeMillis() + "]--------");
+                    Iterator i$ = q.iterator();
+
+                    ResponseQuery rq = new ResponseQuery();
+                    rq.setObservable(o);
+                    rq.setObject(q);
+
+                    while (i$.hasNext()) {
+                        RDFTuple t = (RDFTuple) i$.next();
+                        System.out.println(t.toString());
+                    }
+
+                    pubResponseQuery(rq);
                 }
             });
         } catch (ParseException e) {
@@ -74,11 +92,7 @@ public class QueryCsparql {
         client = StartBroker.getInstance().Connection("SSD");
     }
 
-    public void pubResponseQuery(java.util.Observable o, Object arg) {
-        ResponseQuery rq = new ResponseQuery();
-        rq.setO(o);
-        rq.setArg(arg);
-
+    public void pubResponseQuery(ResponseQuery rq) {
         Gson gson = new Gson();
         String m = gson.toJson(rq);
 
@@ -86,6 +100,9 @@ public class QueryCsparql {
         msg.setQos(2);
         msg.setRetained(false);
         msg.setPayload(m.getBytes());
+
+        new ReceiverResult().reveiver(rq);
+        // new ReceiverResult().reveiver(msg);
 
         try {
             client.publish(topic, msg);

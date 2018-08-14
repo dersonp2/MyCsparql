@@ -2,6 +2,8 @@ import Model.OntologyPrefix;
 import Resultados.Formatter;
 import eu.larkc.csparql.cep.api.RdfQuadruple;
 import eu.larkc.csparql.cep.api.RdfStream;
+import eu.larkc.csparql.common.RDFTable;
+import eu.larkc.csparql.common.RDFTuple;
 import eu.larkc.csparql.common.utils.CsparqlUtils;
 import eu.larkc.csparql.core.ResultFormatter;
 import eu.larkc.csparql.core.engine.ConsoleFormatter;
@@ -16,6 +18,8 @@ import streamer.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
+import java.util.Iterator;
+import java.util.Observable;
 import java.util.Observer;
 import java.util.Properties;
 
@@ -27,6 +31,7 @@ public class Main {
     CsparqlQueryResultProxy csparqlQueryResult = null;
     Logger logger;
     private static OntologyPrefix prefix = new OntologyPrefix();
+
     public static void main(String[] args) {
 
         Logger logger = LoggerFactory.getLogger(Main.class);
@@ -50,11 +55,11 @@ public class Main {
         }
 
         //Seleciona o Metodo
-        //basicRDF();
+        basicRDF();
         //percntilRDF();
         //socialRDF();
         //cloudMonitoring();
-        staticKnowledge();
+        //staticKnowledge();
 
     }//psvm
 
@@ -65,31 +70,31 @@ public class Main {
         Logger logger = LoggerFactory.getLogger(Main.class);
 
         query = "REGISTER QUERY WhoLikesWhat AS "
-                + "PREFIX ex: <"+prefix.getSosa()+"> "
-                + "PREFIX iot: <"+prefix.getIotlite()+"> "
+                + "PREFIX ex: <" + prefix.getSosa() + "> "
+                + "PREFIX iot: <" + prefix.getIotlite() + "> "
                 + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
                 + "SELECT ?s ?o "
                 + "FROM STREAM <http://myexample.org/stream> [RANGE 5s STEP 1s] "
                 + "WHERE { ?s iot:hasQuatityKind ?o }";
 
         query2 = "REGISTER QUERY WhoLikesWhat AS "
-                + "PREFIX ex: <"+prefix.getSosa()+"> "
-                + "PREFIX iot: <"+prefix.getIotlite()+"> "
+                + "PREFIX ex: <" + prefix.getSosa() + "> "
+                + "PREFIX iot: <" + prefix.getIotlite() + "> "
                 + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
                 + "SELECT ?result "
                 + "FROM STREAM <http://myexample.org/stream> [RANGE 5s STEP 1s] "
                 + "WHERE { ?s iot:hasQuatityKind iot:Temperature . "
-                +"?s ex:hasResult ?result . " +
+                + "?s ex:hasResult ?result . " +
                 "FILTER (?result > \"26\"^^xsd:integer)}";
 
         query2 = "REGISTER QUERY WhoLikesWhat AS "
-                + "PREFIX ex: <"+prefix.getSosa()+"> "
-                + "PREFIX iot: <"+prefix.getIotlite()+"> "
+                + "PREFIX ex: <" + prefix.getSosa() + "> "
+                + "PREFIX iot: <" + prefix.getIotlite() + "> "
                 + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
                 + "SELECT ?result "
                 + "FROM STREAM <http://myexample.org/stream> [RANGE 5s STEP 1s] "
                 + "WHERE { ?s iot:hasQuatityKind iot:Temperature . "
-                +"?s ex:hasResult ?result . " +
+                + "?s ex:hasResult ?result . " +
                 "FILTER (?result > \"26\"^^xsd:integer)}";
         rdfStream = new BasicRDFStreamTestGenerator("http://myexample.org/stream");
 
@@ -98,10 +103,24 @@ public class Main {
         thread.start();
 
         try {
-            csparqlQueryResult = engine.registerQuery(query2, false);
+            csparqlQueryResult = engine.registerQuery(query, false);
             logger.debug("Query: {}", query);
             logger.debug("Query Start Time : {}", System.currentTimeMillis());
-            csparqlQueryResult.addObserver(new ConsoleFormatter());
+            //csparqlQueryResult.addObserver(new ConsoleFormatter());
+            csparqlQueryResult.addObserver(new Observer() {
+                @Override
+                public void update(Observable o, Object arg) {
+                    RDFTable q = (RDFTable) arg;
+                    System.out.println();
+                    System.out.println("-------" + q.size() + " results at SystemTime=[" + System.currentTimeMillis() + "]--------");
+                    Iterator i$ = q.iterator();
+
+                    while (i$.hasNext()) {
+                        RDFTuple t = (RDFTuple) i$.next();
+                        System.out.println(t.toString());
+                    }
+                }
+            });
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -148,14 +167,14 @@ public class Main {
     }
 
     public static void staticKnowledge() {
-        String query,queryOri, query2 = null;
+        String query, queryOri, query2 = null;
         RdfStream rdfStream = null;
         CsparqlQueryResultProxy csparqlQueryResult = null;
         Logger logger = LoggerFactory.getLogger(Main.class);
         OntologyPrefix p = new OntologyPrefix();
         try {
-           // engine.putStaticNamedModel("http://streamreasoning.org/roomConnection",
-             //       CsparqlUtils.serializeRDFFile("examples_files/roomConnection.rdf"));
+            // engine.putStaticNamedModel("http://streamreasoning.org/roomConnection",
+            //       CsparqlUtils.serializeRDFFile("examples_files/roomConnection.rdf"));
 
             engine.putStaticNamedModel("http://streamreasoning.org/roomConnection",
                     CsparqlUtils.serializeRDFFile("examples_files/OntoRDF.owl"));
@@ -176,7 +195,7 @@ public class Main {
 
         query = "REGISTER QUERY staticKnowledge AS "
                 + "PREFIX :<http://www.streamreasoning.org/ontologies/sr4ld2014-onto#> "
-                + "PREFIX iot: <"+prefix.getIotlite()+"> "
+                + "PREFIX iot: <" + prefix.getIotlite() + "> "
                 + "SELECT ?g "
                 + "FROM STREAM <http://streamreasoning.org/streams/fb> [RANGE 1s STEP 1s] "
                 + "FROM <http://streamreasoning.org/roomConnection> "
@@ -185,7 +204,7 @@ public class Main {
                 "?post :who ?p1 ." +
                 "?post :where ?r ."
                 + "?r :isConnectedTo ?r1 . "
-                +"?id iot:hasQuatityKind ?g ."
+                + "?id iot:hasQuatityKind ?g ."
                 + "} ";
 
         query2 = "REGISTER QUERY staticKnowledge AS "
@@ -197,7 +216,7 @@ public class Main {
                 + "?p :posts ?post . " +
                 "?post :who ?p1 ." +
                 "?post :where ?r ."
-                +"?r :isConnectedTo ?r1 . "
+                + "?r :isConnectedTo ?r1 . "
                 + "} ";
 
         FacebookStreamer4RoomConnection fb = new FacebookStreamer4RoomConnection("http://streamreasoning.org/streams/fb",
@@ -257,7 +276,7 @@ public class Main {
                 + "GROUP BY ?opinionMaker ?o "
                 + "HAVING (COUNT(?follower)>2)";
 
-       // engine.putStaticNamedModel("http://streamreasoning.org/larkc/csparql/LBSMA-static-k.rdf", "http://streamreasoning.org/larkc/csparql/LBSMA-static-k.rdf");
+        // engine.putStaticNamedModel("http://streamreasoning.org/larkc/csparql/LBSMA-static-k.rdf", "http://streamreasoning.org/larkc/csparql/LBSMA-static-k.rdf");
 
         query3 = ""
                 + "REGISTER QUERY StreamingAndExternalStaticRdfGraph AS "
