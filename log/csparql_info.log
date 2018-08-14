@@ -1770,3 +1770,475 @@ INFO  20407 [2018-08-14 17:07:36,149] [MQTT Call: SSD] Communication.Communicati
 INFO  20458 [2018-08-14 17:07:36,200] [MQTT Call: SSD] Communication.Communication  - New Stream
 INFO  25543 [2018-08-14 17:07:41,285] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
 INFO  25544 [2018-08-14 17:07:41,286] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  0 [2018-08-14 17:48:48,626] [main] Start.StartBroker  - Broker Conectado
+INFO  15 [2018-08-14 17:48:48,641] [main] Communication.Communication  - Subscreveu no tópico: QueryCSparql
+INFO  18 [2018-08-14 17:48:48,644] [main] Communication.Communication  - Subscreveu no tópico: Stream
+INFO  1384 [2018-08-14 17:48:50,010] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  1429 [2018-08-14 17:48:50,055] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  3491 [2018-08-14 17:48:52,117] [MQTT Call: SSD] Start.StartCsparql  - iniciou c-sparql 
+INFO  3499 [2018-08-14 17:48:52,125] [MQTT Call: SSD] Communication.Communication  - Iniciou o Stream do Csparql
+INFO  3597 [2018-08-14 17:48:52,223] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  3597 [2018-08-14 17:48:52,223] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  5548 [2018-08-14 17:48:54,174] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  5588 [2018-08-14 17:48:54,214] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  7645 [2018-08-14 17:48:56,271] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  7688 [2018-08-14 17:48:56,314] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  8004 [2018-08-14 17:48:56,630] [MQTT Call: SSD] Communication.Communication  - Recebeu mensagem no topico: QueryCsparl
+INFO  8012 [2018-08-14 17:48:56,638] [MQTT Call: SSD] Csparql.QueryCsparql  - Chegou a consulta
+INFO  9796 [2018-08-14 17:48:58,422] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  9840 [2018-08-14 17:48:58,466] [MQTT Call: SSD] Communication.Communication  - New Stream
+ERROR 10938 [2018-08-14 17:48:59,564] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR 11828 [2018-08-14 17:49:00,454] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  11855 [2018-08-14 17:49:00,481] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  11898 [2018-08-14 17:49:00,524] [MQTT Call: SSD] Communication.Communication  - New Stream
+ERROR 12808 [2018-08-14 17:49:01,434] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR 13809 [2018-08-14 17:49:02,435] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  13949 [2018-08-14 17:49:02,575] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  13996 [2018-08-14 17:49:02,622] [MQTT Call: SSD] Communication.Communication  - New Stream
+ERROR 14822 [2018-08-14 17:49:03,448] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR 15810 [2018-08-14 17:49:04,436] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  16064 [2018-08-14 17:49:04,690] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  16108 [2018-08-14 17:49:04,734] [MQTT Call: SSD] Communication.Communication  - New Stream
+ERROR 16820 [2018-08-14 17:49:05,446] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR 17804 [2018-08-14 17:49:06,430] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  18161 [2018-08-14 17:49:06,787] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  18204 [2018-08-14 17:49:06,830] [MQTT Call: SSD] Communication.Communication  - New Stream
+ERROR 18823 [2018-08-14 17:49:07,449] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR 19828 [2018-08-14 17:49:08,454] [com.espertech.esper.Timer-default-1] com.espertech.esper.core.StatementResultServiceImpl  - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at Teste.ReceiverResult.reveiver(ReceiverResult.java:52)
+	at Csparql.QueryCsparql.pubResponseQuery(QueryCsparql.java:108)
+	at Csparql.QueryCsparql$1.update(QueryCsparql.java:87)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.core.engine.CsparqlQueryResultProxy.notify(CsparqlQueryResultProxy.java:59)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.notifySubscribers(CsparqlEngineImpl.java:534)
+	at eu.larkc.csparql.core.engine.CsparqlEngineImpl.update(CsparqlEngineImpl.java:581)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at eu.larkc.csparql.cep.esper.QueryListener.update(QueryListener.java:70)
+	at com.espertech.esper.core.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:359)
+	at com.espertech.esper.core.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:243)
+	at com.espertech.esper.core.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:229)
+	at com.espertech.esper.core.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:57)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1076)
+	at com.espertech.esper.core.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:476)
+	at com.espertech.esper.core.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:376)
+	at com.espertech.esper.core.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:211)
+	at com.espertech.esper.core.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:185)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+INFO  20239 [2018-08-14 17:49:08,865] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  20283 [2018-08-14 17:49:08,909] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  0 [2018-08-14 17:49:13,499] [main] Start.StartBroker  - Broker Conectado
+INFO  13 [2018-08-14 17:49:13,512] [main] Communication.Communication  - Subscreveu no tópico: QueryCSparql
+INFO  17 [2018-08-14 17:49:13,516] [main] Communication.Communication  - Subscreveu no tópico: Stream
+INFO  1272 [2018-08-14 17:49:14,771] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  1319 [2018-08-14 17:49:14,818] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  2889 [2018-08-14 17:49:16,388] [MQTT Call: SSD] Start.StartCsparql  - iniciou c-sparql 
+INFO  2914 [2018-08-14 17:49:16,413] [MQTT Call: SSD] Communication.Communication  - Iniciou o Stream do Csparql
+INFO  3346 [2018-08-14 17:49:16,845] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  3387 [2018-08-14 17:49:16,886] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  5410 [2018-08-14 17:49:18,909] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  5457 [2018-08-14 17:49:18,956] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  7474 [2018-08-14 17:49:20,973] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  7518 [2018-08-14 17:49:21,017] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  9550 [2018-08-14 17:49:23,049] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  9591 [2018-08-14 17:49:23,090] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  11636 [2018-08-14 17:49:25,135] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  11677 [2018-08-14 17:49:25,176] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  13701 [2018-08-14 17:49:27,200] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  13745 [2018-08-14 17:49:27,244] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  15802 [2018-08-14 17:49:29,301] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  15851 [2018-08-14 17:49:29,350] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  17881 [2018-08-14 17:49:31,380] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  17923 [2018-08-14 17:49:31,422] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  19972 [2018-08-14 17:49:33,471] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  20015 [2018-08-14 17:49:33,514] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  22368 [2018-08-14 17:49:35,867] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  22368 [2018-08-14 17:49:35,867] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  24450 [2018-08-14 17:49:37,949] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  24493 [2018-08-14 17:49:37,992] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  26514 [2018-08-14 17:49:40,013] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  26556 [2018-08-14 17:49:40,055] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  28588 [2018-08-14 17:49:42,087] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  28636 [2018-08-14 17:49:42,135] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  30655 [2018-08-14 17:49:44,154] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  30697 [2018-08-14 17:49:44,196] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  32763 [2018-08-14 17:49:46,262] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  32811 [2018-08-14 17:49:46,310] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  34838 [2018-08-14 17:49:48,337] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  34881 [2018-08-14 17:49:48,380] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  36936 [2018-08-14 17:49:50,435] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  36976 [2018-08-14 17:49:50,475] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  39025 [2018-08-14 17:49:52,524] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  39066 [2018-08-14 17:49:52,565] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  41127 [2018-08-14 17:49:54,626] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  41169 [2018-08-14 17:49:54,668] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  43211 [2018-08-14 17:49:56,710] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  43259 [2018-08-14 17:49:56,758] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  45291 [2018-08-14 17:49:58,790] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  45337 [2018-08-14 17:49:58,836] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  47345 [2018-08-14 17:50:00,844] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  47391 [2018-08-14 17:50:00,890] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  49446 [2018-08-14 17:50:02,945] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  49489 [2018-08-14 17:50:02,988] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  51540 [2018-08-14 17:50:05,039] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  51581 [2018-08-14 17:50:05,080] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  53632 [2018-08-14 17:50:07,131] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  53678 [2018-08-14 17:50:07,177] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  55685 [2018-08-14 17:50:09,184] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  55729 [2018-08-14 17:50:09,228] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  57807 [2018-08-14 17:50:11,306] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  57836 [2018-08-14 17:50:11,335] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  60079 [2018-08-14 17:50:13,578] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  60080 [2018-08-14 17:50:13,579] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  62612 [2018-08-14 17:50:16,111] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  62730 [2018-08-14 17:50:16,229] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  64876 [2018-08-14 17:50:18,375] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  65023 [2018-08-14 17:50:18,522] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  66238 [2018-08-14 17:50:19,737] [MQTT Call: SSD] Communication.Communication  - Recebeu mensagem no topico: QueryCsparl
+INFO  66257 [2018-08-14 17:50:19,756] [MQTT Call: SSD] Csparql.QueryCsparql  - Chegou a consulta
+INFO  68388 [2018-08-14 17:50:21,887] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  68388 [2018-08-14 17:50:21,887] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  69174 [2018-08-14 17:50:22,673] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  69222 [2018-08-14 17:50:22,721] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  80764 [2018-08-14 17:50:34,263] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  80766 [2018-08-14 17:50:34,265] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  1 [2018-08-14 17:50:58,765] [main] Start.StartBroker  - Broker Conectado
+INFO  16 [2018-08-14 17:50:58,780] [main] Communication.Communication  - Subscreveu no tópico: QueryCSparql
+INFO  20 [2018-08-14 17:50:58,784] [main] Communication.Communication  - Subscreveu no tópico: Stream
+INFO  1600 [2018-08-14 17:51:00,364] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  1656 [2018-08-14 17:51:00,420] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  4855 [2018-08-14 17:51:03,619] [MQTT Call: SSD] Start.StartCsparql  - iniciou c-sparql 
+INFO  4883 [2018-08-14 17:51:03,647] [MQTT Call: SSD] Communication.Communication  - Iniciou o Stream do Csparql
+INFO  5014 [2018-08-14 17:51:03,778] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  5015 [2018-08-14 17:51:03,779] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  5815 [2018-08-14 17:51:04,579] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  5856 [2018-08-14 17:51:04,620] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  7926 [2018-08-14 17:51:06,690] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  7931 [2018-08-14 17:51:06,695] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  9063 [2018-08-14 17:51:07,827] [MQTT Call: SSD] Communication.Communication  - Recebeu mensagem no topico: QueryCsparl
+INFO  9135 [2018-08-14 17:51:07,899] [MQTT Call: SSD] Csparql.QueryCsparql  - Chegou a consulta
+INFO  11814 [2018-08-14 17:51:10,578] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  11815 [2018-08-14 17:51:10,579] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  12142 [2018-08-14 17:51:10,906] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  12216 [2018-08-14 17:51:10,980] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  22089 [2018-08-14 17:51:20,853] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  22780 [2018-08-14 17:51:21,544] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  30575 [2018-08-14 17:51:29,339] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  30626 [2018-08-14 17:51:29,390] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  73658 [2018-08-14 17:52:12,422] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  73661 [2018-08-14 17:52:12,425] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  0 [2018-08-14 17:52:58,892] [main] Start.StartBroker  - Broker Conectado
+INFO  17 [2018-08-14 17:52:58,909] [main] Communication.Communication  - Subscreveu no tópico: QueryCSparql
+INFO  23 [2018-08-14 17:52:58,915] [main] Communication.Communication  - Subscreveu no tópico: Stream
+INFO  1255 [2018-08-14 17:53:00,147] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  1304 [2018-08-14 17:53:00,196] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  2930 [2018-08-14 17:53:01,822] [MQTT Call: SSD] Start.StartCsparql  - iniciou c-sparql 
+INFO  2937 [2018-08-14 17:53:01,829] [MQTT Call: SSD] Communication.Communication  - Iniciou o Stream do Csparql
+INFO  3349 [2018-08-14 17:53:02,241] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  3392 [2018-08-14 17:53:02,284] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  5443 [2018-08-14 17:53:04,335] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  5485 [2018-08-14 17:53:04,377] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  7532 [2018-08-14 17:53:06,424] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  7575 [2018-08-14 17:53:06,467] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  9612 [2018-08-14 17:53:08,504] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  9658 [2018-08-14 17:53:08,550] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  11753 [2018-08-14 17:53:10,645] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  11801 [2018-08-14 17:53:10,693] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  13888 [2018-08-14 17:53:12,780] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  14044 [2018-08-14 17:53:12,936] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  16064 [2018-08-14 17:53:14,956] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  16138 [2018-08-14 17:53:15,030] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  16838 [2018-08-14 17:53:15,730] [MQTT Call: SSD] Communication.Communication  - Recebeu mensagem no topico: QueryCsparl
+INFO  16899 [2018-08-14 17:53:15,791] [MQTT Call: SSD] Csparql.QueryCsparql  - Chegou a consulta
+INFO  18911 [2018-08-14 17:53:17,803] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  18911 [2018-08-14 17:53:17,803] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  20258 [2018-08-14 17:53:19,150] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  20651 [2018-08-14 17:53:19,543] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  33546 [2018-08-14 17:53:32,438] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  33990 [2018-08-14 17:53:32,882] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  38296 [2018-08-14 17:53:37,188] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  39856 [2018-08-14 17:53:38,748] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  44584 [2018-08-14 17:53:43,476] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  44586 [2018-08-14 17:53:43,478] [MQTT Call: SSD] Communication.Communication  - New Stream
+INFO  50526 [2018-08-14 17:53:49,418] [MQTT Call: SSD] Communication.Communication  - deliveryComplete
+INFO  51256 [2018-08-14 17:53:50,148] [MQTT Call: SSD] Communication.Communication  - New Stream

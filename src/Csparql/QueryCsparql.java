@@ -18,6 +18,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.slf4j.Logger;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Observer;
 
@@ -64,21 +65,18 @@ public class QueryCsparql {
                 @Override
                 public void update(java.util.Observable o, Object arg) {
 
+                    ArrayList<RDFTuple> rdfTuples = new ArrayList();
                     RDFTable q = (RDFTable) arg;
-                    RDFTable q1 = new RDFTable() ;
-                    q1.add(new RDFTuple());
-                    System.out.println();
-                    System.out.println("-------" + q.size() + " results at SystemTime=[" + System.currentTimeMillis() + "]--------");
                     Iterator i$ = q.iterator();
-
-                    ResponseQuery rq = new ResponseQuery();
-                    rq.setObservable(o);
-                    rq.setObject(q);
 
                     while (i$.hasNext()) {
                         RDFTuple t = (RDFTuple) i$.next();
                         System.out.println(t.toString());
+                        rdfTuples.add(t);
                     }
+                    ResponseQuery rq = new ResponseQuery();
+                    rq.setObservable(o);
+                    rq.setRdfTuples(rdfTuples);
 
                     pubResponseQuery(rq);
                 }

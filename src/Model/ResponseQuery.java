@@ -1,12 +1,14 @@
 package Model;
 
 import eu.larkc.csparql.common.RDFTable;
+import eu.larkc.csparql.common.RDFTuple;
 
+import java.util.ArrayList;
 import java.util.Observable;
 
 public class ResponseQuery {
     private java.util.Observable observable;
-    private RDFTable object;
+    ArrayList<RDFTuple> rdfTuples;
 
     public Observable getObservable() {
         return observable;
@@ -16,11 +18,12 @@ public class ResponseQuery {
         this.observable = observable;
     }
 
-    public RDFTable getObject() {
-        return object;
+    public ArrayList<RDFTuple> getRdfTuples() {
+        return rdfTuples;
     }
 
-    public void setObject(RDFTable object) {
-        this.object = object;
+    public void setRdfTuples(ArrayList<RDFTuple> rdfTuples) {
+        this.rdfTuples = rdfTuples;
     }
+
 }
