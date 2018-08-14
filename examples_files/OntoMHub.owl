@@ -1,0 +1,807 @@
+<Ontology
+	 xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:sr="http://www.streamreasoning.org/ontologies/sr4ld2014-onto#"
+     ontologyIRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#">
+    <Prefix name="" IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="qu" IRI="http://purl.org/NET/ssnx/qu/qu#"/>
+    <Prefix name="geo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="voaf" IRI="http://purl.org/vocommons/voaf#"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="m3-lite" IRI="http://purl.org/iot/vocab/m3-lite#"/>
+    <Prefix name="iot-lite" IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"/>
+    <Prefix name="qu-rec20" IRI="http://purl.org/NET/ssnx/qu/qu-rec20#"/>
+	
+
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Payam Barnaghi</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:bibliographicCitation"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, &quot;IoT-Lite: A Lightweight Semantic Model for the Internet of Things&quot;, in Proc. of the IEEE Conferences on Ubiquitous Intelligence &amp; Computing, July 2016, Toulouse, France.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tarek Elsaleh</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology describes IoT concepts into three classes. Objects, system or resources and services. The devices are also splitted into, although not restricted to, three classes: sensing devices actuating devices and tag devices. The services are described with an availability or access control and a coverage. This coverage represents the area covered by the IoT device. The figure below depicts the concepts of the ontology and the main relationships between them.
+IoT Lite Ontology is created to be used with a common taxonomy to describe the Units and QuantityKind that IoT devices can meassure. This taxonomy represent individuals in the ontology and is based in well-known taxonomies as: qu and qudt.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The IoT lite Ontology is a lightweight ontology to represent Internet of Things resources, entities and services. The lightweight allow the representation and use of IoT platforms without consuming excessive processing time when querying the ontology. However it is also a meta ontology that can be extended in order to represent IoT concepts in a more detail way in different domains.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Kerry Taylor</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Working Draft</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">0.4</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This ontology is distributed under a Creative Commons Attribution 3.0 Unported License - http://creativecommons.org/licenses/by/3.0/. This copyright applies to the iot-lite ontology specification and RDF.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:bibliographicCitation"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, &quot;IoT-Lite: a lightweight semantic model for the internet of things and its use with dynamic semantics&quot;, Personal and Ubiquitous Computing (2017).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maria Bermudez-Edo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This work is part of the EU FP7 FIWARE project and the EU H2020 FIESTA-IoT project at the Institution for Communication Systems University of Surrey.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2017-04-11</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IoT-Lite Ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <NamedIndividual IRI="HXM030655_InstantSpeedSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isAssociatedWith"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="geo:alt"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="endpoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="radius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="KM/H"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="geo:long"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qu:QuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="geo:Point"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="qu:Unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="result"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMetadata"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="interfaceType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:hasSubSystem"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ActuatingDevice"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="sosa:hasSimpleResult"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HXM030655_DistanceSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSubSystemOf"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSensingDevice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Lsdi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="mouuid"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="interfaceDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAttribute"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="geo:lat"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="relativeLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ssn:onPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="isMobile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="exposedBy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCoverage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="altRelative"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:dateSubmitted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="rssi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="exposes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HXM030655_HeartBeatNumSensor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="metadataValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="sosa:phenomenonTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="geo:location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HXM030655_StridesSensor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:bibliographicCitation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="metadataType"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Acceleration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HXM030655_HeartRateSensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HXM030655_CadenceSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sosa:Result"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="isOnline"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="ActuatingDevice"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qu:QuantityKind"/>
+        <NamedIndividual IRI="Acceleration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <NamedIndividual IRI="HXM030655_CadenceSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ssn:Device"/>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <NamedIndividual IRI="HXM030655_DistanceSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <NamedIndividual IRI="HXM030655_HeartBeatNumSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <NamedIndividual IRI="HXM030655_HeartRateSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <NamedIndividual IRI="HXM030655_InstantSpeedSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+        <NamedIndividual IRI="HXM030655_StridesSensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="geo:Point"/>
+        <NamedIndividual IRI="Lsdi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="qu:Unit"/>
+        <NamedIndividual IRI="KM/H"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubSystemOf"/>
+        <NamedIndividual IRI="HXM030655_CadenceSensor"/>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubSystemOf"/>
+        <NamedIndividual IRI="HXM030655_DistanceSensor"/>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubSystemOf"/>
+        <NamedIndividual IRI="HXM030655_HeartBeatNumSensor"/>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubSystemOf"/>
+        <NamedIndividual IRI="HXM030655_HeartRateSensor"/>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="HXM030655_InstantSpeedSensor"/>
+        <NamedIndividual IRI="Lsdi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasQuantityKind"/>
+        <NamedIndividual IRI="HXM030655_InstantSpeedSensor"/>
+        <NamedIndividual IRI="Acceleration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasUnit"/>
+        <NamedIndividual IRI="HXM030655_InstantSpeedSensor"/>
+        <NamedIndividual IRI="KM/H"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubSystemOf"/>
+        <NamedIndividual IRI="HXM030655_InstantSpeedSensor"/>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubSystemOf"/>
+        <NamedIndividual IRI="HXM030655_StridesSensor"/>
+        <NamedIndividual IRI="HXM030655_Device"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="mouuid"/>
+        <NamedIndividual IRI="HXM030655_HeartRateSensor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">23623-3732UUID</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="mouuid"/>
+        <NamedIndividual IRI="HXM030655_InstantSpeedSensor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">10929-38239732-2328UUID</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="radius"/>
+        <NamedIndividual IRI="Lsdi"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">50.6</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="exposedBy"/>
+        <ObjectProperty IRI="exposes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isSubSystemOf"/>
+        <ObjectProperty abbreviatedIRI="ssn:hasSubSystem"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="exposedBy"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCoverage"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasLocation"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPoint"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasQuantityKind"/>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasUnit"/>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="exposes"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasLocation"/>
+        <Class abbreviatedIRI="geo:Point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPoint"/>
+        <Class abbreviatedIRI="geo:Point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasQuantityKind"/>
+        <Class abbreviatedIRI="qu:QuantityKind"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSensingDevice"/>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasUnit"/>
+        <Class abbreviatedIRI="qu:Unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="geo:location"/>
+        <Class abbreviatedIRI="geo:Point"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="sosa:hasResult"/>
+        <Class abbreviatedIRI="sosa:Result"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="id"/>
+        <Class abbreviatedIRI="ssn:Device"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="mouuid"/>
+        <Class abbreviatedIRI="ssn:SensingDevice"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="result"/>
+        <Class abbreviatedIRI="sosa:Result"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="rssi"/>
+        <Class abbreviatedIRI="sosa:Result"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="endpoint"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="interfaceDescription"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="interfaceType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="isMobile"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="isOnline"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="metadataType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="metadataValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="radius"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="result"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="sosa:resultTime"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ActuatingDevice</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Device that can actuate over an object or QuantityKind.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>altRelative</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relative Altitude can be used in place of an absolute altitude, especially in buildings, where it makes more sense to locate by levels or floors. For example the value &quot;0&quot; would indicate &quot;ground floor&quot;, and &quot;1&quot; would indicate &quot;1st floor&quot; and so on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>endpoint</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Endpoint of the service. It is usually a URL where the service is available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>exposedBy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A device is exposed by a service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>exposes</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">For service-oriented queries. The inverse of exposedBy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAttribute</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links the devices with their attributes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasCoverage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links the devices with their coverages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasMetadata</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links any concept with metadata about that concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasQuantityKind</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a sensor or an attribute with the quantity  kind it measures (e.g. A sensor -sensor1- measures temperature: sensor1 hasQuantityKind temperature).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasSensingDevice</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links a sensor with a sensing device the same way as SSN.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasUnit</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links the sensor with the units of the quantity kind it measures (e.g. A sensor -sensor1- measures temperature in Celsius: senso1 hasUnit celsius).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>id</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The ID of the Device or Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>interfaceDescription</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Interface Description of the service, e.g WADL, WSDL, NGSI9 etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>interfaceType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the type of interface of the service endpoint, e.g. RESTful, NGSI-9, MQTT, CoAP etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isAssociatedWith</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the associations between objects and sensors (e.g. A table (object) has an attribute (temperature at the table) which is associated with a sensor (the temperature sensor of the room).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isMobile</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Is the Device mobile? This can be used by an IoT management platform to enable tracking of the device&apos;s location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isOnline</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Is the IoT Service exposing the Resource, or associated with the Entity, online?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isSubSystemOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This defines that a devices system is a subsystem of another system. For example, a multi-sensor device is a subsystem of a smart building testbed. This is the inverse of the SSN object property &quot;hasSubSystem&quot;. It allows a graph to start from a subsystem. This is useful for resource-centric graphs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>metadataType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Defines the type pf the metadata value (e.g. resolution of the sensor).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>metadataValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Value of the metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>radius</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Specifies the radius of a circle coverage defined by a point -the center of the circle- and its radius.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>relativeLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relative Location is used to provide a place for where the Device is in. For example, Geonames URIs can be used to represent a place, city, area, or region. For &quot;University of Surrey&quot; this would be &quot;http://sws.geonames.org/6695971/&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>rssi</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">received signal strength indicator (RSSI) is a measurement of the power present in a received radio signal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ssn:Device</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ssn:SensingDevice</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SensingDevice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="altRelative"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="relativeLocation"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="geo:alt"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="geo:lat"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="geo:long"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>sosa:Result</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:Result</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>sosa:Result</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <AbbreviatedIRI>sosa:Result</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <AbbreviatedIRI>sosa:Result</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The value 20 as the height of a certain tree together with the unit, e.g., Meter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>sosa:hasResult</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:hasResult</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>sosa:hasResult</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <AbbreviatedIRI>sosa:hasResult</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>sosa:hasSimpleResult</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The simple value of an Observation or Actuation or act of Sampling.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:hasSimpleResult</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>sosa:hasSimpleResult</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has simple result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <AbbreviatedIRI>sosa:hasSimpleResult</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The simple value of an Observation or Actuation or act of Sampling.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <AbbreviatedIRI>sosa:hasSimpleResult</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">For instance, the values 23 or true.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>sosa:phenomenonTime</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:phenomenonTime</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>sosa:phenomenonTime</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">phenomenon time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <AbbreviatedIRI>sosa:phenomenonTime</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>sosa:resultTime</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>sosa:resultTime</AbbreviatedIRI>
+        <AbbreviatedIRI>sosa:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>sosa:resultTime</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">result time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <AbbreviatedIRI>sosa:resultTime</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="altRelative"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="relativeLocation"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="altRelative"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="relativeLocation"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty abbreviatedIRI="geo:alt"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty abbreviatedIRI="geo:lat"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty abbreviatedIRI="geo:long"/>
+        <AbbreviatedIRI>geo:Point</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -18,15 +18,9 @@ public class Formatter extends ResultFormatter{
     String topicResponse = "ResponseQuery";
 
     public Formatter() {
-        try {
-            cliente = new MqttClient(brokerUrl,"pubAnderson");
-            cliente.connect();
-            System.out.println("Conectou ao broker: "+brokerUrl);
-        } catch (MqttException e) {
-            e.printStackTrace();
-            System.out.println("erro: "+e.getCause());
-            System.out.println("erro: "+e.toString());
-        }
+        //cliente = new MqttClient(brokerUrl,"pubAnderson");
+        //cliente.connect();
+        System.out.println("Conectou ao broker: "+brokerUrl);
     }
 
     public void update(Observable o, Object arg) {
@@ -42,7 +36,8 @@ public class Formatter extends ResultFormatter{
             RDFTuple t = (RDFTuple)i$.next();
             //System.out.println(t.toString());
             System.out.println("--------* T To String: "+t.toString());
-            pubResult(t);
+
+            //pubResult(t);
         }
 
         System.out.println();

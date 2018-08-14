@@ -42,7 +42,7 @@ public class SocialRDFStreamTesteGenerator extends RdfStream implements Runnable
                         "http://mycsparql.lsdi/likes", "http://mycsparql.lsdi/Obj" + this.c, System.currentTimeMillis());
                 this.put(rdfQuadruple2);
                 StreamCsparql.getInstance().setStream(rdfQuadruple2);
-                    logger.info(rdfQuadruple2.toString());
+                    //logger.info(rdfQuadruple2.toString());
 
                 try {
                     Thread.sleep(500);

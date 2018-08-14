@@ -1,4 +1,4 @@
-package br.ufma.lsdi.ssd.Model;
+package Model;
 
 public class OntologyPrefix {
 

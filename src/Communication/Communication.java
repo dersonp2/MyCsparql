@@ -42,7 +42,7 @@ public class Communication{
 
                 @Override
                 public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-                    logger.info("Chegou msg");
+                   // logger.info("Chegou msg");
                     if (s.equals("QueryCSparql")) {
                         queryTopic(mqttMessage);
                     } else {
@@ -65,15 +65,18 @@ public class Communication{
         gson = new Gson();
         String mgson = new String(mqttMessage.getPayload());
         Query query = gson.fromJson(mgson, Query.class);
+        StreamCsparql.getInstance();
         new QueryCsparql(query);
+
     }
 
     public void streamTopic(MqttMessage mqttMessage) {
-        logger.info("Recebeu mensagem no topico: " + "Stream");
+        //logger.info("Recebeu mensagem no topico: " + "Stream");
+        logger.info("New Stream");
         gson = new Gson();
         String mStream = new String(mqttMessage.getPayload());
         SemanticSensorData data = gson.fromJson(mStream, SemanticSensorData.class);
-        logger.info(": "+data.getSensorName());
+        //logger.info(": "+data.getSensorName());
         //ModelRDFs mRdfs = gson.fromJson(mStream, ModelRDFs.class);
        RdfQuadruple[] rdfQuadruples = data.getRdfQuadruple();
         for (RdfQuadruple rdfQ : rdfQuadruples) {

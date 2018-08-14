@@ -7,12 +7,13 @@ import eu.larkc.csparql.cep.api.RdfQuadruple;
 import eu.larkc.csparql.cep.api.RdfStream;
 import eu.larkc.csparql.core.engine.CsparqlEngineImpl;
 import org.slf4j.Logger;
+import streamer.SocialRDFStreamTesteGenerator;
 
 public class StreamCsparql {
     public static StreamCsparql instance = null;
     static RdfStream rdfStream = null;
     private static CsparqlEngineImpl engine = null;
-    private  static String iri = "http://lsdi.ufma.br/stream";
+    private  static String iri = "http://mycsparql.lsdi/stream";
     private static Logger logger;
 
     public static StreamCsparql getInstance() {
@@ -22,7 +23,9 @@ public class StreamCsparql {
                 engine = StartCsparql.getInstance().getEngine();
                 logger = new ConfigLog().log(Communication.class);
                 logger.info("Iniciou o Stream do Csparql");
+                //rdfStream = new SocialRDFStreamTesteGenerator("http://mycsparql.lsdi/stream");
                 rdfStream = new RdfStream(iri);
+                engine.registerStream(rdfStream);
             }
         }
         return instance;
@@ -30,7 +33,7 @@ public class StreamCsparql {
 
     public void setStream(RdfQuadruple rdfq) {
         //startCsparql();
-        logger.info("Registrou o fluxo");
+        //logger.info("Registrou o fluxo");
         this.rdfStream.put(rdfq);
     }
 }

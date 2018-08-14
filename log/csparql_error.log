@@ -7931,3 +7931,61 @@ ERROR 8714 [2018-07-31 16:31:41,219] [MQTT Call: SSD] Communication.Communicatio
 ERROR 96663 [2018-07-31 16:33:49,167] [MQTT Rec: SSD] Communication.Communication  - connectionLost
 ERROR 5109 [2018-07-31 16:33:54,318] [MQTT Rec: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.io.FileNotFoundException: C:\Users\Anderson\AppData\Local\Temp\SSD-tcplsdiufmabr1883\r-1.msg (O sistema não pode encontrar o caminho especificado)
 ERROR 12569 [2018-07-31 16:40:25,585] [MQTT Call: SSD] Communication.Communication  - connectionLost: MqttException (0) - java.lang.NullPointerException
+ERROR 0 [2018-08-06 15:01:54,591] [main] Start.StartBroker  - Erro ao conectar com o broker - 
+ERROR 0 [2018-08-06 15:04:57,220] [main] Start.StartBroker  - Erro ao conectar com o broker - 
+ERROR 0 [2018-08-06 17:35:00,759] [main] Start.StartBroker  - Erro ao conectar com o broker - 
+ERROR 0 [2018-08-10 11:04:24,519] [main] Start.StartBroker  - Erro ao conectar com o broker - 
+ERROR 19390 [2018-08-12 18:55:11,531] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 19484 [2018-08-12 18:55:11,625] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 19499 [2018-08-12 18:55:11,640] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 19515 [2018-08-12 18:55:11,656] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2359 [2018-08-12 18:55:54,540] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2391 [2018-08-12 18:55:54,572] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2391 [2018-08-12 18:55:54,572] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2406 [2018-08-12 18:55:54,587] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2296 [2018-08-12 18:56:03,773] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2328 [2018-08-12 18:56:03,805] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2328 [2018-08-12 18:56:03,805] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2343 [2018-08-12 18:56:03,820] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2094 [2018-08-12 18:57:41,617] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2125 [2018-08-12 18:57:41,648] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2125 [2018-08-12 18:57:41,648] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2125 [2018-08-12 18:57:41,648] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2187 [2018-08-12 18:58:14,879] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2218 [2018-08-12 18:58:14,910] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2218 [2018-08-12 18:58:14,910] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2234 [2018-08-12 18:58:14,926] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 17624 [2018-08-12 19:05:37,363] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 17687 [2018-08-12 19:05:37,426] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 17702 [2018-08-12 19:05:37,441] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 17718 [2018-08-12 19:05:37,457] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2156 [2018-08-12 19:07:51,463] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2187 [2018-08-12 19:07:51,494] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2203 [2018-08-12 19:07:51,510] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2203 [2018-08-12 19:07:51,510] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2094 [2018-08-12 19:07:54,382] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2125 [2018-08-12 19:07:54,413] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2125 [2018-08-12 19:07:54,413] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2141 [2018-08-12 19:07:54,429] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2109 [2018-08-12 19:08:04,622] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2141 [2018-08-12 19:08:04,654] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2141 [2018-08-12 19:08:04,654] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2141 [2018-08-12 19:08:04,654] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2063 [2018-08-12 19:13:09,965] [main] org.apache.jena.riot  - [line: 31, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2094 [2018-08-12 19:13:09,996] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2094 [2018-08-12 19:13:09,996] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): Ontology xmlns="http://www.w3.org/2002/07/owl#"
+ERROR 2094 [2018-08-12 19:13:09,996] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 1954 [2018-08-12 19:14:22,425] [main] org.apache.jena.riot  - [line: 10, col: 67] {E201} Illegal attributes on rdf:RDF
+ERROR 1969 [2018-08-12 19:14:22,440] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): rdf:RDF
+ERROR 1985 [2018-08-12 19:14:22,456] [main] org.apache.jena.riot  - [line: 3, col: 1 ] Broken IRI (newline): rdf:RDF
+ERROR 1985 [2018-08-12 19:14:22,456] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2031 [2018-08-12 19:15:03,078] [main] org.apache.jena.riot  - [line: 30, col: 93] {E205} rdf:Description is not allowed as an element tag here.
+ERROR 2047 [2018-08-12 19:15:03,094] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2015 [2018-08-12 19:17:08,063] [main] org.apache.jena.riot  - [line: 34, col: 102] {E201} Multiple children of property element
+ERROR 2031 [2018-08-12 19:17:08,079] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 2187 [2018-08-12 19:21:39,958] [main] org.apache.jena.riot  - [line: 34, col: 102] {E201} Multiple children of property element
+ERROR 2234 [2018-08-12 19:21:40,005] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 6931 [2018-08-12 19:22:01,754] [main] org.apache.jena.riot  - [line: 34, col: 102] {E201} Multiple children of property element
+ERROR 6993 [2018-08-12 19:22:01,816] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [LT]
+ERROR 10403 [2018-08-13 09:33:41,975] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Content is not allowed in prolog.
+ERROR 2547 [2018-08-13 09:34:23,937] [main] org.apache.jena.riot  - [line: 1, col: 1 ] Content is not allowed in prolog.

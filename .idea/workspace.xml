@@ -2,47 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41693c88-97d7-4c30-a446-e1dd7735b7c4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Mycsparql/Model/OntologyPrefix.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/PercentileStream.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/ResponseQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/csparql_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/csparql_debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/csparql_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/csparql_error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/csparql_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/csparql_info.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Communication/Communication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/ResponseQuery$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/ResponseQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Communication/SubQueryStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/ConfigLog/ConfigLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/ConfigLog/ConfigLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/QueryCsparql.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/LocalMessage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/Query.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/SensorData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/JsonClass/SensorDataExtended.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/StreamCsparql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Csparql/StreamCsparql.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Model/SensorDataExtended.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Observer/Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Observer/Observable.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Resultados/Formatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Resultados/Formatter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartBroker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartBroker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartCsparql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/Start/StartCsparql.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/TesteBroker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/TesteBroker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/configuracao_log/csparql_log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/SubQueryStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/SubQueryStream.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/BasicRDFStreamTestGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/BasicRDFStreamTestGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/CloudMonitoringRDFStreamTestGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/CloudMonitoringRDFStreamTestGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SensorStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SensorStream.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SocialRDFStreamTesteGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Mycsparql/streamer/SocialRDFStreamTesteGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Communication/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Communication/Communication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/SensorDataExtended.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SemanticSensorData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Csparql/QueryCsparql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Csparql/QueryCsparql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Csparql/StreamCsparql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Csparql/StreamCsparql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/OntologyPrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/OntologyPrefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resultados/Formatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resultados/Formatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubQueryStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubQueryStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/streamer/BasicRDFStreamTestGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/streamer/BasicRDFStreamTestGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/streamer/FacebookStreamer4RoomConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/streamer/FacebookStreamer4RoomConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/streamer/PercentileStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/streamer/PercentileStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,41 +60,61 @@
     <session id="1161605702">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="5" />
+          <entry key="class" value="20" />
+          <entry key="java" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="5" />
+          <entry key="CLASS" value="20" />
+          <entry key="JAVA" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="91" />
+          <entry key="java" value="1186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="91" />
+          <entry key="JAVA" value="1186" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Communication/Communication.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state relative-caret-position="427">
+              <caret line="214" column="43" selection-start-line="214" selection-start-column="43" selection-end-line="214" selection-end-column="43" />
+              <folding>
+                <element signature="method#percntilRDF#0;class#Main#0" />
+                <element signature="method#socialRDF#0;class#Main#0" />
+                <element signature="method#cloudMonitoring#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SubQueryStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,28 +123,54 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/SensorData.java">
+        <entry file="file://$PROJECT_DIR$/src/Csparql/QueryCsparql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="1120">
+              <caret line="82" column="35" selection-start-line="77" selection-start-column="7" selection-end-line="82" selection-end-column="35" />
+              <folding>
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#2148#2149#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/SemanticSensorData.java">
+        <entry file="file://$PROJECT_DIR$/src/Communication/Communication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="1060">
+              <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Resultados/Formatter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SubQueryStream.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/ResponseQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="100">
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="7" />
+              <folding>
+                <element signature="e#149#150#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,11 +221,9 @@
         <option value="$PROJECT_DIR$/src/Csparql/Csparql.java" />
         <option value="$PROJECT_DIR$/src/TesteBroker.java" />
         <option value="$PROJECT_DIR$/src/Start/StartStream.java" />
-        <option value="$PROJECT_DIR$/src/Resultados/Formatter.java" />
         <option value="$PROJECT_DIR$/src/Communication/ResponseQuery.java" />
         <option value="$PROJECT_DIR$/src/streamer/SensorStream.java" />
         <option value="$PROJECT_DIR$/src/Communication/SubQuery.java" />
-        <option value="$PROJECT_DIR$/src/streamer/BasicRDFStreamTestGenerator.java" />
         <option value="$PROJECT_DIR$/src/JsonClass/SensorData.java" />
         <option value="$PROJECT_DIR$/src/JsonClass/LocalMessage.java" />
         <option value="$PROJECT_DIR$/src/Communication/Connect.java" />
@@ -206,14 +237,20 @@
         <option value="$PROJECT_DIR$/src/ConfigLog/ConfigLog.java" />
         <option value="$PROJECT_DIR$/src/Start/StartBroker.java" />
         <option value="$PROJECT_DIR$/src/Start/StartCsparql.java" />
-        <option value="$PROJECT_DIR$/src/Csparql/QueryCsparql.java" />
-        <option value="$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java" />
         <option value="$PROJECT_DIR$/src/Model/ModelRDFs.java" />
-        <option value="$PROJECT_DIR$/src/Csparql/StreamCsparql.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/SubQueryStream.java" />
         <option value="$PROJECT_DIR$/src/Model/SensorData.java" />
         <option value="$PROJECT_DIR$/src/Model/SemanticSensorData.java" />
+        <option value="$PROJECT_DIR$/src/Model/OntologyPrefix.java" />
+        <option value="$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java" />
+        <option value="$PROJECT_DIR$/src/Csparql/StreamCsparql.java" />
+        <option value="$PROJECT_DIR$/src/Resultados/Formatter.java" />
+        <option value="$PROJECT_DIR$/src/streamer/BasicRDFStreamTestGenerator.java" />
+        <option value="$PROJECT_DIR$/src/streamer/PercentileStream.java" />
+        <option value="$PROJECT_DIR$/src/streamer/FacebookStreamer4RoomConnection.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Model/ResponseQuery.java" />
+        <option value="$PROJECT_DIR$/src/Csparql/QueryCsparql.java" />
+        <option value="$PROJECT_DIR$/src/SubQueryStream.java" />
         <option value="$PROJECT_DIR$/src/Communication/Communication.java" />
       </list>
     </option>
@@ -247,6 +284,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MyCsparql" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyCsparql" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -262,25 +312,32 @@
             <path>
               <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
               <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
+              <item name="ConfigLog" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
+              <item name="Csparql" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
+              <item name="Interfaces" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
               <item name="Model" type="1f31426a:PackageElementNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
             <path>
-              <item name="MyCsparql" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyCsparql" type="462c0819:PsiDirectoryNode" />
+              <item name="MyCsparql" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Mycsparql" type="616d4139:PackageViewModuleNode" />
+              <item name="Resultados" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,9 +345,9 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533563419292" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534184403786" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CSPARQL-ReadyToGoPack" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -450,12 +507,19 @@
       <workItem from="1533044758287" duration="81000" />
       <workItem from="1533048700338" duration="5146000" />
       <workItem from="1533062834688" duration="4359000" />
-      <workItem from="1533559568118" duration="3234000" />
+      <workItem from="1533559568118" duration="16172000" />
+      <workItem from="1533652725835" duration="3584000" />
+      <workItem from="1533903193567" duration="12679000" />
+      <workItem from="1533989855024" duration="3643000" />
+      <workItem from="1533996160989" duration="8062000" />
+      <workItem from="1534108157662" duration="4100000" />
+      <workItem from="1534162820691" duration="10238000" />
+      <workItem from="1534195318049" duration="1536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186751000" />
+    <option name="totallyTimeSpent" value="243531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -470,24 +534,24 @@
     <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.086886995" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Designer" order="6" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32984293" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32872504" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.5503634" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.39771548" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49733475" weight="0.54932505" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3956386" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32984293" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026652" side_tool="true" weight="0.54932505" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32984293" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32987553" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -511,91 +575,75 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Csparql/StreamCsparql.java</url>
-          <line>17</line>
-          <properties class="Csparql.StreamCsparql" method="getInstance">
+          <url>file://$PROJECT_DIR$/src/Resultados/Formatter.java</url>
+          <line>19</line>
+          <properties class="Resultados.Formatter" method="&lt;init&gt;">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Csparql/StreamCsparql.java</url>
-          <line>30</line>
-          <properties class="Csparql.StreamCsparql" method="setStream">
+          <url>file://$PROJECT_DIR$/src/Resultados/Formatter.java</url>
+          <line>25</line>
+          <properties class="Resultados.Formatter" method="update">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Communication/Communication.java</url>
-          <line>61</line>
-          <properties class="Communication.Communication" method="queryTopic">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="51" />
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Communication/Communication.java</url>
-          <line>70</line>
-          <properties class="Communication.Communication" method="streamTopic">
+          <line>43</line>
+          <properties method="messageArrived">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="52" />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/streamer/FacebookStreamer4RoomConnection.java</url>
+          <line>21</line>
+          <properties class="streamer.FacebookStreamer4RoomConnection" method="run">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/streamer/FacebookStreamer4RoomConnection.java</url>
+          <line>14</line>
+          <properties class="streamer.FacebookStreamer4RoomConnection" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>149</line>
+          <properties class="Main" method="staticKnowledge">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="114" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Communication/Communication.java</url>
-          <line>46</line>
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>285</line>
           <properties />
-          <option name="timeStamp" value="48" />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Communication/Communication.java</url>
-          <line>48</line>
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>279</line>
           <properties />
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/streamer/FacebookStreamer4RoomConnection.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="104" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/csparql_log4j.properties" />
-    <entry file="jar://$PROJECT_DIR$/lib/csparql-core-0.9.5.jar!/eu/larkc/csparql/core/engine/CsparqlEngine.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streamer/LBSMARDFStreamTestGenerator.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/csparql-sparql-jena-0.9.5.jar!/eu/larkc/csparql/sparql/jena/JenaEngine.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="259" selection-start-line="259" selection-end-line="259" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/MqttConnectOptions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/System.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa10396.11075/SubscriberCliente.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa10396.28462/PublishCliente.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/csparql-core-0.9.5.jar!/eu/larkc/csparql/core/engine/ConsoleFormatter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gui/MenuPub.java" />
-    <entry file="file://$PROJECT_DIR$/src/TesteListener/Interfaces/Listener.java" />
-    <entry file="file://$PROJECT_DIR$/src/TesteListener/Interfaces/Observable.java" />
-    <entry file="file://$PROJECT_DIR$/src/TesteListener/CommunicationCsparql.java" />
-    <entry file="file://$PROJECT_DIR$/src/TesteListener/teste.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7048.30278/SubscriberCliente.java" />
     <entry file="file://$PROJECT_DIR$/src/Gui/Menu.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Observer.java" />
@@ -629,20 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/streamer/SensorStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="42" column="46" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/streamer/BasicRDFStreamTestGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="178" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="178" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interfaces/Observable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -658,20 +692,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JsonClass/Query.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/SensorDataExtended.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Resultados/Formatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SensorDataExtended.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/Query.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -681,20 +702,6 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/System.java" />
     <entry file="file://$PROJECT_DIR$/src/Response/ResponseQuery.java" />
-    <entry file="file://$PROJECT_DIR$/src/Csparql/QueryCsparql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/csparql-core-0.9.5.jar!/eu/larkc/csparql/core/engine/CsparqlEngineImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="260" selection-start-line="260" selection-end-line="260" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Start/StartCsparql.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -706,13 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Start/StartBroker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -733,20 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/csparql-cep-api-0.9.5.jar!/eu/larkc/csparql/cep/api/RdfStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="67" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/MqttClient.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3400">
@@ -754,10 +740,169 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ModelRDFs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SensorData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/SemanticSensorData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/streamer/SocialRDFStreamTesteGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="306">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/esper-3.5.0.jar!/com/espertech/esper/dispatch/DispatchServiceImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/esper-3.5.0.jar!/com/espertech/esper/core/UpdateDispatchFutureSpin.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/esper-3.5.0.jar!/com/espertech/esper/core/UpdateDispatchViewBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/esper-3.5.0.jar!/com/espertech/esper/core/StatementResultServiceImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/csparql-cep-esper-0.9.5.jar!/eu/larkc/csparql/cep/esper/QueryListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/csparql-core-0.9.5.jar!/eu/larkc/csparql/core/engine/CsparqlEngineImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="439" selection-start-line="439" selection-end-line="439" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/csparql-core-0.9.5.jar!/eu/larkc/csparql/core/engine/CsparqlQueryResultProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/esper-3.5.0.jar!/com/espertech/esper/core/EPRuntimeImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="792" column="16" selection-start-line="792" selection-start-column="16" selection-end-line="792" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/internal/CommsCallback.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Start/StartBroker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streamer/SensorStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/csparql-cep-api-0.9.5.jar!/eu/larkc/csparql/cep/api/RdfStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streamer/PercentileStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/OntologyPrefix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+          <folding>
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1877#1878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/csparql-common-0.9.5.jar!/eu/larkc/csparql/common/utils/CsparqlUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streamer/BasicRDFStreamTestGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/streamer/FacebookStreamer4RoomConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -766,62 +911,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Csparql/StreamCsparql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="640">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ModelRDFs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#174#175#0" expanded="true" />
-            <element signature="e#209#210#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SubQueryStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="340">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.1.0.jar!/org/eclipse/paho/client/mqttv3/internal/CommsCallback.class">
+    <entry file="file://$PROJECT_DIR$/src/Csparql/QueryCsparql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/SensorData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/SemanticSensorData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="1120">
+          <caret line="82" column="35" selection-start-line="77" selection-start-column="7" selection-end-line="82" selection-end-column="35" />
+          <folding>
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Communication/Communication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        <state relative-caret-position="1060">
+          <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/ResponseQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="7" />
+          <folding>
+            <element signature="e#149#150#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/csparql-core-0.9.5.jar!/eu/larkc/csparql/core/engine/ConsoleFormatter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="214" column="43" selection-start-line="214" selection-start-column="43" selection-end-line="214" selection-end-column="43" />
+          <folding>
+            <element signature="method#percntilRDF#0;class#Main#0" />
+            <element signature="method#socialRDF#0;class#Main#0" />
+            <element signature="method#cloudMonitoring#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Resultados/Formatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -865,7 +1033,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -882,6 +1050,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
