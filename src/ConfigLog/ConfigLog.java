@@ -8,7 +8,7 @@ public class ConfigLog {
     public ConfigLog() {
     }
 
-    public Logger log (Class c){
+    public Logger log(Class c) {
         Logger logger = LoggerFactory.getLogger(c);
         String caminho = "src/ConfigLog/csparql_log4j.properties";
         try {

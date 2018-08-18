@@ -23,17 +23,17 @@ public class StartCsparql {
             engine = new CsparqlEngineImpl();
             try {
                 engine.initialize(true);
-                logger.info("iniciou c-sparql ");
+                logger.info("Start C-SPARQL");
 
             } catch (Exception e) {
                 e.printStackTrace();
-                logger.info("Erro ao iniciar c-sparql ");
+                logger.info("Error Starting C-SPARQL");
             }
         }
         return engine;
     }
 
-    public void configLog(){
-        logger= new ConfigLog().log(StartCsparql.class);
+    public void configLog() {
+        logger = new ConfigLog().log(StartCsparql.class);
     }
 }

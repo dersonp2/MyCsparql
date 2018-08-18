@@ -8,7 +8,7 @@ import java.util.Observable;
 
 public class ResponseQuery {
     private java.util.Observable observable;
-    ArrayList<RDFTuple> rdfTuples;
+    private ArrayList<RDFTuple> rdfTuples;
 
     public Observable getObservable() {
         return observable;

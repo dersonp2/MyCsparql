@@ -11,12 +11,12 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 public class SensorStream extends RdfStream implements Runnable {
-    RdfQuadruple q1, q2, q3, q4;
-    OntologyPrefix onto = new OntologyPrefix();
+    private RdfQuadruple q1, q2, q3, q4;
+    private OntologyPrefix onto = new OntologyPrefix();
     private static MqttClient client;
     private boolean keepRunning;
-    long tempTS;
-    int result = 0;
+    private long tempTS;
+    private int result = 0;
 
     public SensorStream(String iri) {
         super(iri);
@@ -29,9 +29,9 @@ public class SensorStream extends RdfStream implements Runnable {
         while (keepRunning == true) {
             try {
 
-                Thread.sleep(1000);
+                Thread.sleep(10000);
 
-                result += 13;
+                result += 3;
                 //Primeira Observação
                 tempTS = System.currentTimeMillis();
                 q1 = new RdfQuadruple(onto.getIotlite() + "FFE1-0000-1000-8000-00805F9B34FB", onto.getRdf()
@@ -43,13 +43,10 @@ public class SensorStream extends RdfStream implements Runnable {
                 q3 = new RdfQuadruple(onto.getIotlite() + "FFE1-0000-1000-8000-00805F9B34FB", onto.getIotlite()
                         + "hasQuatityKind", onto.getIotlite() + "Temperature", tempTS);
 
+                //q4 = new RdfQuadruple(onto.getIotlite() + "FFE1-0000-1000-8000-00805F9B34FB", onto.getSosa()
+                        //+ "hasResult", String.valueOf(result) + "^^http://www.w3.org/2001/XMLSchema#integer", tempTS);
                 q4 = new RdfQuadruple(onto.getIotlite() + "FFE1-0000-1000-8000-00805F9B34FB", onto.getSosa()
-                        + "hasResult", String.valueOf(result) + "^^http://www.w3.org/2001/XMLSchema#integer", tempTS);
-
-                /*this.put(q1);
-                this.put(q2);
-                this.put(q3);
-                this.put(q4);*/
+                        + "hasResult", result + "^^http://www.w3.org/2001/XMLSchema#integer", tempTS);
 
                 RdfQuadruple[] rdfQuadruple = new RdfQuadruple[]{q1, q2, q3, q4};
                 pubResult(rdfQuadruple);

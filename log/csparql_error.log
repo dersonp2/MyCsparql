@@ -8547,3 +8547,11 @@ java.lang.NullPointerException
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+ERROR 41467 [2018-08-17 22:46:58,616] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 1 ] Content is not allowed in prolog.
+ERROR 41530 [2018-08-17 22:46:58,679] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 1 ] Out of place: [KEYWORD:examples_files]
+ERROR 41545 [2018-08-17 22:46:58,694] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 15] Unknown char: /(47;0x002F)
+ERROR 41561 [2018-08-17 22:46:58,710] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [KEYWORD:examples_files]
+ERROR 31270 [2018-08-17 22:48:16,463] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 1 ] Content is not allowed in prolog.
+ERROR 31333 [2018-08-17 22:48:16,526] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 1 ] Out of place: [KEYWORD:examples_files]
+ERROR 31348 [2018-08-17 22:48:16,541] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 15] Unknown char: /(47;0x002F)
+ERROR 31364 [2018-08-17 22:48:16,557] [MQTT Call: SSD] org.apache.jena.riot  - [line: 1, col: 1 ] Expected a { character to start a JSON Object but got [KEYWORD:examples_files]

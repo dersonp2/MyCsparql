@@ -7,7 +7,6 @@ import Start.StartCsparql;
 import ConfigLog.ConfigLog;
 import Teste.ReceiverResult;
 import com.google.gson.Gson;
-import eu.larkc.csparql.cep.api.RdfStream;
 import eu.larkc.csparql.common.RDFTable;
 import eu.larkc.csparql.common.RDFTuple;
 import eu.larkc.csparql.core.engine.CsparqlEngine;
@@ -35,13 +34,11 @@ public class QueryCsparql {
     private String topic = null;
 
     public QueryCsparql(Query query) {
-        System.out.println("ResponseQuery - Chegou no ResponseQuery");
         topic = TOPIC_RESPONSE + query.getReturnCode();
-        System.out.println("Vai publicar em " + topic);
         connect();
         configLog();
         startCsparql();
-        query(query.getQuery());
+        query(query.getQuery(), query.getVar1(), query.getVar2());
     }
 
     public void startCsparql() {
@@ -52,13 +49,15 @@ public class QueryCsparql {
         logger = new ConfigLog().log(QueryCsparql.class);
     }
 
-    public void query(String query) {
+    public void query(String query, String var1, String var2) {
+        if (var1 != null && var2 != null){
+                engine.putStaticNamedModel(var1,var2);
+
+        }
         try {
-            logger.info("Chegou a consulta");
             csparqlQueryResult = engine.registerQuery(query, false);
             logger.debug("Query: {}", query);
-            logger.debug("Query Start Time : {}", System.currentTimeMillis());
-
+            //logger.debug("Query Start Time : {}", System.currentTimeMillis());
 
             csparqlQueryResult = engine.registerQuery(query, false);
             csparqlQueryResult.addObserver(new Observer() {
@@ -71,13 +70,11 @@ public class QueryCsparql {
 
                     while (i$.hasNext()) {
                         RDFTuple t = (RDFTuple) i$.next();
-                        System.out.println(t.toString());
                         rdfTuples.add(t);
                     }
                     ResponseQuery rq = new ResponseQuery();
                     rq.setObservable(o);
                     rq.setRdfTuples(rdfTuples);
-
                     pubResponseQuery(rq);
                 }
             });
@@ -98,13 +95,9 @@ public class QueryCsparql {
         msg.setQos(2);
         msg.setRetained(false);
         msg.setPayload(m.getBytes());
-
-        new ReceiverResult().reveiver(rq);
-        // new ReceiverResult().reveiver(msg);
-
         try {
             client.publish(topic, msg);
-            logger.info("\n" + "Publicou no topico: " + topic);
+            logger.info("\n" + "Publish Response: " + topic);
         } catch (MqttException e) {
             e.printStackTrace();
         }

@@ -13,7 +13,7 @@ public class StreamCsparql {
     public static StreamCsparql instance = null;
     static RdfStream rdfStream = null;
     private static CsparqlEngineImpl engine = null;
-    private  static String iri = "http://mycsparql.lsdi/stream";
+    private static String iri = "http://mycsparql.lsdi/stream";
     private static Logger logger;
 
     public static StreamCsparql getInstance() {
@@ -22,8 +22,6 @@ public class StreamCsparql {
             if (engine == null) {
                 engine = StartCsparql.getInstance().getEngine();
                 logger = new ConfigLog().log(Communication.class);
-                logger.info("Iniciou o Stream do Csparql");
-                //rdfStream = new SocialRDFStreamTesteGenerator("http://mycsparql.lsdi/stream");
                 rdfStream = new RdfStream(iri);
                 engine.registerStream(rdfStream);
             }
@@ -32,8 +30,6 @@ public class StreamCsparql {
     }
 
     public void setStream(RdfQuadruple rdfq) {
-        //startCsparql();
-        //logger.info("Registrou o fluxo");
         this.rdfStream.put(rdfq);
     }
 }

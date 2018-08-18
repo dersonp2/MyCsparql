@@ -178,6 +178,8 @@ public class Main {
 
             engine.putStaticNamedModel("http://streamreasoning.org/roomConnection",
                     CsparqlUtils.serializeRDFFile("examples_files/OntoRDF.owl"));
+
+
             logger.info("SERIALIZOU O RDF");
         } catch (Exception e) {
             e.printStackTrace();

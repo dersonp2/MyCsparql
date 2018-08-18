@@ -57,7 +57,5 @@ public class ReceiverResult {
             t = rdfTuples.get(i);
             System.out.println(t.toString());
         }
-
-
     }
 }

@@ -32,10 +32,10 @@ public class StartBroker {
             try {
                 client = new MqttClient(brokerUrl, clientId, dataStore);
                 client.connect();
-                logger.info("Broker Conectado");
+                logger.info("Broker connected");
             } catch (MqttException e) {
                 e.printStackTrace();
-                logger.error("Erro ao conectar com o broker - ", e.getMessage());
+                logger.error("Error connecting to broker - ", e.getMessage());
             }
         }
         return client;
