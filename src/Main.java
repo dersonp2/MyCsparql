@@ -1,5 +1,8 @@
 import Model.OntologyPrefix;
-import Resultados.Formatter;
+import Resultados.FormRdf;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.util.FileManager;
 import eu.larkc.csparql.cep.api.RdfQuadruple;
 import eu.larkc.csparql.cep.api.RdfStream;
 import eu.larkc.csparql.common.RDFTable;
@@ -15,13 +18,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import streamer.*;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.ParseException;
-import java.util.Iterator;
-import java.util.Observable;
-import java.util.Observer;
-import java.util.Properties;
+import java.util.*;
 
 public class Main {
 
@@ -55,16 +53,18 @@ public class Main {
         }
 
         //Seleciona o Metodo
-        basicRDF();
+        //basicRDF();
         //percntilRDF();
         //socialRDF();
         //cloudMonitoring();
         //staticKnowledge();
+        //staticKnowledgeIoT();
+        //staticKnowledgeIoT2();
+        SmartParking();
 
-    }//psvm
-
+    }
     public static void basicRDF() {
-        String query, query2 = null;
+        String query, query2, query3 = null;
         RdfStream rdfStream = null;
         CsparqlQueryResultProxy csparqlQueryResult = null;
         Logger logger = LoggerFactory.getLogger(Main.class);
@@ -87,7 +87,7 @@ public class Main {
                 + "?s ex:hasResult ?result . " +
                 "FILTER (?result > \"26\"^^xsd:integer)}";
 
-        query2 = "REGISTER QUERY WhoLikesWhat AS "
+        query3 = "REGISTER QUERY WhoLikesWhat AS "
                 + "PREFIX ex: <" + prefix.getSosa() + "> "
                 + "PREFIX iot: <" + prefix.getIotlite() + "> "
                 + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "
@@ -96,6 +96,7 @@ public class Main {
                 + "WHERE { ?s iot:hasQuatityKind iot:Temperature . "
                 + "?s ex:hasResult ?result . " +
                 "FILTER (?result > \"26\"^^xsd:integer)}";
+
         rdfStream = new BasicRDFStreamTestGenerator("http://myexample.org/stream");
 
         engine.registerStream(rdfStream);
@@ -103,8 +104,8 @@ public class Main {
         thread.start();
 
         try {
-            csparqlQueryResult = engine.registerQuery(query, false);
-            logger.debug("Query: {}", query);
+            csparqlQueryResult = engine.registerQuery(query2, false);
+            logger.debug("Query: {}", query2);
             logger.debug("Query Start Time : {}", System.currentTimeMillis());
             //csparqlQueryResult.addObserver(new ConsoleFormatter());
             csparqlQueryResult.addObserver(new Observer() {
@@ -230,8 +231,8 @@ public class Main {
 
         try {
             //csparqlQueryResult = engine.registerQuery(query, false);
-            CsparqlQueryResultProxy c = engine.registerQuery(query, false);
-            logger.debug("Query: {}", query);
+            CsparqlQueryResultProxy c = engine.registerQuery(queryOri, false);
+            logger.debug("Query: {}", queryOri);
             logger.debug("Query Start Time : {}", System.currentTimeMillis());
             c.addObserver(new ConsoleFormatter());
         } catch (ParseException e) {
@@ -311,7 +312,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        csparqlQueryResult.addObserver(new Formatter());
+        //csparqlQueryResult.addObserver(new Formatter());
 
         try {
             Thread.sleep(600000);
@@ -364,4 +365,179 @@ public class Main {
         }
 
     }
-}//m
+
+    public static void staticKnowledgeIoT() {
+
+        RdfStream rdfStream = null;
+        CsparqlQueryResultProxy csparqlQueryResult = null;
+        Logger logger = LoggerFactory.getLogger(Main.class);
+        OntologyPrefix p = new OntologyPrefix();
+        try {
+            engine.putStaticNamedModel("http://mycsparql.lsdi/knowlegdeBase", CsparqlUtils.serializeRDFFile("examples_files/ontordff.owl"));
+            logger.info("SERIALIZOU O RDF");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String query2 = "REGISTER QUERY MhubSemantic AS "
+                + "PREFIX iot-lite:<" + p.getIotlite() + "> "
+                + "PREFIX sosa:<" + p.getSosa() + "> "
+                + "PREFIX geo:<" + p.getGeo() + "> "
+                + "SELECT ?result ?l "
+                + "FROM STREAM <http://mycsparql.lsdi/stream> [RANGE 10s STEP 5s] "
+                + "FROM <http://mycsparql.lsdi/knowlegdeBase> "
+                + "WHERE { "
+                + "?id sosa:hasResult ?result ."
+                + "?id iot-lite:hasLocation ?l . "
+                + "?id iot-lite:hasQuantityKind iot-lite:Humidity . "
+                + "} ";
+
+
+        SensorStream sensorRdfStream = new SensorStream("http://mycsparql.lsdi/stream");
+
+        engine.registerStream(sensorRdfStream);
+        Thread fbThread = new Thread(sensorRdfStream);
+        fbThread.start();
+
+        try {
+            CsparqlQueryResultProxy c = engine.registerQuery(query2, false);
+            logger.debug("Query: {}", query2);
+            logger.debug("Query Start Time : {}", System.currentTimeMillis());
+            c.addObserver(new Observer() {
+                @Override
+                public void update(Observable o, Object arg) {
+                    ArrayList<RDFTuple> rdfTuples = new ArrayList();
+                    RDFTable q = (RDFTable) arg;
+                    Iterator i$ = q.iterator();
+
+                    while (i$.hasNext()) {
+                        RDFTuple t = (RDFTuple) i$.next();
+                        rdfTuples.add(t);
+                        //System.out.println("Resultado1: "+t.toString());
+                    }
+
+                    ArrayList<String> result = new FormRdf().rdfToString(rdfTuples);
+                    System.out.println("\nResult of Humidity:");
+                    for (int i = 0; i < result.size(); i++) {
+                        System.out.println(result.get(i));
+                    }
+                    System.out.println("\n");
+                    //query4
+                    //System.out.println("\nResultado:"+"\nID: " + result.get(0) + "\nTipo: " + result.get(1)+"\n");
+
+                    //Query2
+                    //System.out.println("O valor da temperatura é: " + result.get(0));
+
+                }
+            });
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void SmartParking() {
+
+        RdfStream rdfStream = null;
+        CsparqlQueryResultProxy csparqlQueryResult = null;
+        Logger logger = LoggerFactory.getLogger(Main.class);
+        OntologyPrefix p = new OntologyPrefix();
+        try {
+            engine.putStaticNamedModel("http://mycsparql.lsdi/smartParking", CsparqlUtils.serializeRDFFile("examples_files/ParkingRDF.owl"));
+            logger.info("SERIALIZOU O RDF");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String query2 = "REGISTER QUERY MhubSemantic AS "
+                + "PREFIX pk:<" + p.getPk() + "> "
+                + "SELECT ?s "
+                + "FROM STREAM <"+ p.getPk() +"> [RANGE 5s STEP 5s] "
+                + "FROM <http://mycsparql.lsdi/smartParking> "
+                + "WHERE { "
+                + "?s pk:hasState pk:Free ."
+                + "?s pk:hasVehicleSpace pk:CarSpace "
+                + "} ";
+
+        ParkingStream parkingStream = new ParkingStream(p.getPk());
+
+        engine.registerStream(parkingStream);
+        Thread fbThread = new Thread(parkingStream);
+        fbThread.start();
+
+        try {
+            CsparqlQueryResultProxy c = engine.registerQuery(query2, false);
+            logger.debug("Query: {}", query2);
+            logger.debug("Query Start Time : {}", System.currentTimeMillis());
+            c.addObserver(new ConsoleFormatter());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void staticKnowledgeIoT2() {
+
+        RdfStream rdfStream = null;
+        CsparqlQueryResultProxy csparqlQueryResult = null;
+        Logger logger = LoggerFactory.getLogger(Main.class);
+        OntologyPrefix p = new OntologyPrefix();
+        try {
+            engine.putStaticNamedModel("http://streamreasoning.org/roomConnection", CsparqlUtils.serializeRDFFile("examples_files/ontordff.owl"));
+            logger.info("SERIALIZOU O RDF");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String query2 = "REGISTER QUERY MhubSemantic AS "
+                + "PREFIX iot-lite:<" + p.getIotlite() + "> "
+                + "PREFIX sosa:<" + p.getSosa() + "> "
+                + "PREFIX geo:<" + p.getGeo() + "> "
+                + "SELECT ?result ?t "
+                + "FROM STREAM <http://mycsparql.lsdi/stream> [RANGE 10s STEP 5s] "
+                + "FROM <http://streamreasoning.org/roomConnection> "
+                + "WHERE { "
+                + "?id sosa:hasResult ?result ."
+                + "?id iot-lite:hasLocation geo:Lsdi . "
+                + "?id iot-lite:hasQuantityKind ?t . "
+                + "} ";
+
+
+        SensorStream sensorRdfStream = new SensorStream("http://mycsparql.lsdi/stream");
+
+        engine.registerStream(sensorRdfStream);
+        Thread fbThread = new Thread(sensorRdfStream);
+        fbThread.start();
+
+        try {
+            CsparqlQueryResultProxy c = engine.registerQuery(query2, false);
+            logger.debug("Query: {}", query2);
+            logger.debug("Query Start Time : {}", System.currentTimeMillis());
+            c.addObserver(new Observer() {
+                @Override
+                public void update(Observable o, Object arg) {
+                    ArrayList<RDFTuple> rdfTuples = new ArrayList();
+                    RDFTable q = (RDFTable) arg;
+                    Iterator i$ = q.iterator();
+
+                    while (i$.hasNext()) {
+                        RDFTuple t = (RDFTuple) i$.next();
+                        rdfTuples.add(t);
+                        System.out.println("Sensors in the LSDi: " + t.toString());
+                    }
+
+                    //ArrayList<String> result = new FormRdf().rdfToString(rdfTuples);
+                    //query4
+                    //System.out.println("\nResultado:"+"\nID: " + result.get(0) + "\nTipo: " + result.get(1)+"\n");
+
+                    //Query2
+                    //System.out.println("O valor da temperatura é: " + result.get(0));
+
+                }
+            });
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+}

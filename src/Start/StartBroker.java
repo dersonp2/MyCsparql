@@ -31,6 +31,7 @@ public class StartBroker {
         if (client == null) {
             try {
                 client = new MqttClient(brokerUrl, clientId, dataStore);
+                client.setTimeToWait(0);
                 client.connect();
                 logger.info("Broker connected");
             } catch (MqttException e) {

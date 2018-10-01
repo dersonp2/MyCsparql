@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"
+     xml:base="http://purl.oclc.org/NET/UNIS/fiware/iot-lite"
+     xmlns:iot-lite="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#"
+     xmlns:qu="http://purl.org/NET/ssnx/qu/qu#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:m3-lite="http://purl.org/iot/vocab/m3-lite#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:qu-rec20="http://purl.org/NET/ssnx/qu/qu-rec20#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sosa="http://www.w3.org/ns/sosa/">
+    <owl:Ontology rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#">
+        <dc:creator xml:lang="en">Payam Barnaghi</dc:creator>
+        <dc:bibliographicCitation xml:lang="en">Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, &quot;IoT-Lite: A Lightweight Semantic Model for the Internet of Things&quot;, in Proc. of the IEEE Conferences on Ubiquitous Intelligence &amp; Computing, July 2016, Toulouse, France.</dc:bibliographicCitation>
+        <dc:creator xml:lang="en">Tarek Elsaleh</dc:creator>
+        <dc:description xml:lang="en">This ontology describes IoT concepts into three classes. Objects, system or resources and services. The devices are also splitted into, although not restricted to, three classes: sensing devices actuating devices and tag devices. The services are described with an availability or access control and a coverage. This coverage represents the area covered by the IoT device. The figure below depicts the concepts of the ontology and the main relationships between them.
+IoT Lite Ontology is created to be used with a common taxonomy to describe the Units and QuantityKind that IoT devices can meassure. This taxonomy represent individuals in the ontology and is based in well-known taxonomies as: qu and qudt.</dc:description>
+        <rdfs:comment xml:lang="en">The IoT lite Ontology is a lightweight ontology to represent Internet of Things resources, entities and services. The lightweight allow the representation and use of IoT platforms without consuming excessive processing time when querying the ontology. However it is also a meta ontology that can be extended in order to represent IoT concepts in a more detail way in different domains.</rdfs:comment>
+        <dc:creator xml:lang="en">Kerry Taylor</dc:creator>
+        <rdfs:label>Working Draft</rdfs:label>
+        <owl:versionInfo xml:lang="en">0.4</owl:versionInfo>
+        <dc:rights xml:lang="en">This ontology is distributed under a Creative Commons Attribution 3.0 Unported License - http://creativecommons.org/licenses/by/3.0/. This copyright applies to the iot-lite ontology specification and RDF.</dc:rights>
+        <dc:bibliographicCitation xml:lang="en">Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, &quot;IoT-Lite: a lightweight semantic model for the internet of things and its use with dynamic semantics&quot;, Personal and Ubiquitous Computing (2017).</dc:bibliographicCitation>
+        <dc:creator xml:lang="en">Maria Bermudez-Edo</dc:creator>
+        <dc:contributor xml:lang="en">This work is part of the EU FP7 FIWARE project and the EU H2020 FIESTA-IoT project at the Institution for Communication Systems University of Surrey.</dc:contributor>
+        <dc:date xml:lang="en">2017-04-11</dc:date>
+        <dc:title xml:lang="en">IoT-Lite Ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/dateSubmitted -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/dateSubmitted"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#relativeLocation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#relativeLocation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy">
+        <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes"/>
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:comment>A device is exposed by a service.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes">
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:comment>For service-oriented queries. The inverse of exposedBy.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute">
+        <rdfs:comment>Links the devices with their attributes.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasCoverage -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasCoverage">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:comment>Links the devices with their coverages.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasLocation">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasMetadata -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasMetadata">
+        <rdfs:comment>Links any concept with metadata about that concept.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasPoint -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasPoint">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasQuantityKind">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:range rdf:resource="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+        <rdfs:comment>Links a sensor or an attribute with the quantity  kind it measures (e.g. A sensor -sensor1- measures temperature: sensor1 hasQuantityKind temperature).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasSensingDevice -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasSensingDevice">
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:comment>Links a sensor with a sensing device the same way as SSN.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:range rdf:resource="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+        <rdfs:comment>Links the sensor with the units of the quantity kind it measures (e.g. A sensor -sensor1- measures temperature in Celsius: senso1 hasUnit celsius).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith">
+        <rdfs:comment xml:lang="en">Defines the associations between objects and sensors (e.g. A table (object) has an attribute (temperature at the table) which is associated with a sensor (the temperature sensor of the room).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf">
+        <owl:inverseOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+        <rdfs:comment xml:lang="en">This defines that a devices system is a subsystem of another system. For example, a multi-sensor device is a subsystem of a smart building testbed. This is the inverse of the SSN object property &quot;hasSubSystem&quot;. It allows a graph to start from a subsystem. This is useful for resource-centric graphs.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#onPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:comment xml:lang="en">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <rdfs:label xml:lang="en">has result</rdfs:label>
+        <skos:definition xml:lang="en">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/phenomenonTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+        <rdfs:comment xml:lang="en">The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <rdfs:label xml:lang="en">phenomenon time</rdfs:label>
+        <skos:definition xml:lang="en">The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#endpoint -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#endpoint">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Endpoint of the service. It is usually a URL where the service is available.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The ID of the Device or Entity</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Interface Description of the service, e.g WADL, WSDL, NGSI9 etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Defines the type of interface of the service endpoint, e.g. RESTful, NGSI-9, MQTT, CoAP etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isMobile -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isMobile">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Is the Device mobile? This can be used by an IoT management platform to enable tracking of the device&apos;s location.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isOnline -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isOnline">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Is the IoT Service exposing the Resource, or associated with the Entity, online?</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataType -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataType">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Defines the type pf the metadata value (e.g. resolution of the sensor).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Value of the metadata</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#mouuid -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#mouuid">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#radius -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#radius">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Specifies the radius of a circle coverage defined by a point -the center of the circle- and its radius.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#result -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#result">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#rssi -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#rssi">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:comment>received signal strength indicator (RSSI) is a measurement of the power present in a received radio signal</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasSimpleResult -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+        <rdfs:comment xml:lang="en">The simple value of an Observation or Actuation or act of Sampling.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <rdfs:label xml:lang="en">has simple result</rdfs:label>
+        <skos:definition xml:lang="en">The simple value of an Observation or Actuation or act of Sampling.</skos:definition>
+        <skos:example xml:lang="en">For instance, the values 23 or true.</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/resultTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/resultTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <rdfs:label xml:lang="en">result time</rdfs:label>
+        <skos:definition xml:lang="en">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:comment xml:lang="en">Device that can actuate over an object or QuantityKind.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Celcius -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Celcius">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Humidity -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Humidity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#KmH -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#KmH">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Presence -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Presence">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Smoke -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Smoke">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Temperature -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Temperature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Device -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Device">
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensingDevice -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <rdfs:label xml:lang="en">SensingDevice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NET/ssnx/qu/qu#QuantityKind -->
+
+    <owl:Class rdf:about="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+    
+
+
+    <!-- http://purl.org/NET/ssnx/qu/qu#Unit -->
+
+    <owl:Class rdf:about="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        <geo:alt rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <geo:lat rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <geo:long rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <geo:relativeLocation rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Result -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result">
+        <rdfs:comment xml:lang="en">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <rdfs:label xml:lang="en">Result</rdfs:label>
+        <skos:definition xml:lang="en">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</skos:definition>
+        <skos:example xml:lang="en">The value 20 as the height of a certain tree together with the unit, e.g., Meter.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Celcius -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Celcius">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Celcius"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#FFE1-0000-1000-8000-00805F9B34FB -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#FFE1-0000-1000-8000-00805F9B34FB">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <hasLocation rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Lsdi"/>
+        <hasQuantityKind rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Temperature"/>
+        <hasUnit rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Celcius"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#FU-M4C4-0011 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#FU-M4C4-0011">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <hasLocation rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Lsdi"/>
+        <hasQuantityKind rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Smoke"/>
+        <hasUnit rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Opacimeter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Humidity -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Humidity">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Humidity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Opacimeter -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Opacimeter">
+        <rdf:type rdf:resource="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Smoke -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Smoke">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Smoke"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Temperature">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/fiware/iot-lite#UM1-D4D3-0000 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#UM1-D4D3-0000">
+        <rdf:type rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <hasLocation rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Lsdi"/>
+        <hasQuantityKind rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Humidity"/>
+        <hasUnit rdf:resource="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Celcius"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Lsdi -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Lsdi">
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <altRelative rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1o andar</altRelative>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-2.558844</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-44.310703</geo:long>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative">
+        <rdfs:comment xml:lang="en">Relative Altitude can be used in place of an absolute altitude, especially in buildings, where it makes more sense to locate by levels or floors. For example the value &quot;0&quot; would indicate &quot;ground floor&quot;, and &quot;1&quot; would indicate &quot;1st floor&quot; and so on.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -20,8 +20,9 @@ public class StaticModel {
         engine = StartCsparql.getInstance().getEngine();
         try {
             //engine.putStaticNamedModel(var1, var2); Modificar depois
-            engine.putStaticNamedModel(var1,
-                    CsparqlUtils.serializeRDFFile(var2));
+            engine.putStaticNamedModel(var1, CsparqlUtils.serializeRDFFile(var2));
+            //engine.putStaticNamedModel("http://mycsparql.lsdi/smartParking", CsparqlUtils.serializeRDFFile("examples_files/ParkingRDF.owl"));
+            logger.info("Serializou RDF");
         }catch (Exception e){
             System.out.println("Error putStaticNamedModel");
             e.printStackTrace();

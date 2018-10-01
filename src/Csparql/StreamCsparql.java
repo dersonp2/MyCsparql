@@ -13,7 +13,7 @@ public class StreamCsparql {
     public static StreamCsparql instance = null;
     static RdfStream rdfStream = null;
     private static CsparqlEngineImpl engine = null;
-    private static String iri = "http://mycsparql.lsdi/stream";
+    private static String iri = "http://www.lsdi.ufma.br/ontology/Parking#";
     private static Logger logger;
 
     public static StreamCsparql getInstance() {

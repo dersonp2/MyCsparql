@@ -10,6 +10,7 @@ import Model.SemanticSensorData;
 import Start.StartBroker;
 import com.google.gson.Gson;
 import eu.larkc.csparql.cep.api.RdfQuadruple;
+import eu.larkc.csparql.common.utils.CsparqlUtils;
 import org.eclipse.paho.client.mqttv3.*;
 import org.slf4j.Logger;
 
@@ -46,6 +47,12 @@ public class Communication {
                 @Override
                 public void connectionLost(Throwable throwable) {
                     logger.info("connectionLost");
+                    try {
+                        client.reconnect();
+                        logger.info("Reconnecting...");
+                    } catch (MqttException e) {
+                        e.printStackTrace();
+                    }
                 }
 
                 @Override
@@ -85,6 +92,7 @@ public class Communication {
         gson = new Gson();
         String mgson = new String(mqttMessage.getPayload());
         ModelStaticModel staticModel = gson.fromJson(mgson, ModelStaticModel.class);
+        //mudar depoois
         new StaticModel().putStaticNamedModel(staticModel.getVar1(), staticModel.getVar2());
     }
 

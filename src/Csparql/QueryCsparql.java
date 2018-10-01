@@ -55,9 +55,10 @@ public class QueryCsparql {
 
         }
         try {
-            csparqlQueryResult = engine.registerQuery(query, false);
-            logger.debug("Query: {}", query);
+            //csparqlQueryResult = engine.registerQuery(query, false);
+            //logger.debug("Query: {}", query);
             //logger.debug("Query Start Time : {}", System.currentTimeMillis());
+
 
             csparqlQueryResult = engine.registerQuery(query, false);
             csparqlQueryResult.addObserver(new Observer() {
