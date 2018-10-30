@@ -1,0 +1,991 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.lsdi.ufma.br/ontology/Parking#"
+     xml:base="http://www.lsdi.ufma.br/ontology/Parking"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Parking="http://www.lsdi.ufma.br/ontology/Parking#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.lsdi.ufma.br/ontology/Parking#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasDevice">
+        <owl:inverseOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#hasDriverProfile"/>
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#DriverProfile"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasDriverProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasDriverProfile">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Device"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#DriverProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasPreferential -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasPreferential">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#DriverProfile"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Preferential"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasPreferentialSpace -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasPreferentialSpace">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PreferentialSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasReferencePoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasReferencePoint">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ReferencePoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasState"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasVehicle">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#DriverProfile"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#hasVehicleSpace -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#hasVehicleSpace">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#VehicleSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#isAllowedPreferential -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#isAllowedPreferential">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Preferential"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PreferentialSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#isAllowedVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.lsdi.ufma.br/ontology/Parking#isAllowedVehicle">
+        <rdfs:domain rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#VehicleSpace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Bicycle -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#BicycleSpace -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#BicycleSpace">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#VehicleSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Building -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Building">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ReferencePoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Busy -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Busy">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Car -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Car">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#CarSpace -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#CarSpace">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#VehicleSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Device -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Device"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#DriverProfile -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#DriverProfile"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Elderly -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Elderly">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Preferential"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PreferentialSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Entrance -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Entrance">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ReferencePoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Free -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Free">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Motorcycle -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Motorcycle">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#MotorcycleSpace -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#MotorcycleSpace">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#VehicleSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Out -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Out">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ReferencePoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Parking -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Parking"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabled -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabled">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Preferential"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabledSpace -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabledSpace">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PreferentialSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Preferential -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Preferential"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#PreferentialSpace -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#PreferentialSpace"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#ReferencePoint -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#ReferencePoint"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#SnackBar -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#SnackBar">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ReferencePoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space">
+        <rdfs:subClassOf rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Parking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#State -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#State"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Vehicle -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Vehicle"/>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#VehicleSpace -->
+
+    <owl:Class rdf:about="http://www.lsdi.ufma.br/ontology/Parking#VehicleSpace"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Anderson -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Anderson">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#DriverProfile"/>
+        <hasDevice rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#B901F08"/>
+        <hasVehicle rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Car"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#B901F08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#B901F08">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Device"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Bicycle -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Bicycle">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Bicycle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#BicycleSpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#BicycleSpace">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Bicycle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Building -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Building">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Building"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Busy -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Busy">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Busy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Car -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Car">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Car"/>
+        <isAllowedVehicle rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#CarSpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#CarSpace">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Elderly -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Elderly">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Elderly"/>
+        <isAllowedPreferential rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Entrance -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Entrance">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Free -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Free">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Free"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Motorcycle -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Motorcycle">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Motorcycle"/>
+        <isAllowedVehicle rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#MotorcycleSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#MotorcycleSpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#MotorcycleSpace">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#MotorcycleSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Out -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Out">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabled -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabled">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabled"/>
+        <isAllowedPreferential rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabledSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabledSpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabledSpace">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabledSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#SnackBar -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#SnackBar">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#SnackBar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space1">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasPreferentialSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space10">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space11">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space12">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space13">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space14">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space15">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space16">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space17">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space18">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space19">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space2">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasPreferentialSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space20">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Entrance"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space21">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space22">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space23">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space24">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space25">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space26">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space27">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space28">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space29">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space3">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasPreferentialSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#ElderlySpace"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space30">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space31">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space32">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space33">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space34">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space35">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space36">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space37">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space38">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space39">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space4">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasPreferentialSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#PhysicallyDisabledSpace"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space40">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#MotorcycleSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space41">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space42">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space43">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space44">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space45">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space46">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space47">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space48">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space49">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space5">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space50">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space51">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space6">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space7">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space8">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.lsdi.ufma.br/ontology/Parking#Space9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.lsdi.ufma.br/ontology/Parking#Space9">
+        <rdf:type rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Space"/>
+        <hasReferencePoint rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#Out"/>
+        <hasVehicleSpace rdf:resource="http://www.lsdi.ufma.br/ontology/Parking#CarSpace"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

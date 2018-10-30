@@ -5,7 +5,10 @@ import Model.ResponseQuery;
 import Start.StartBroker;
 import Start.StartCsparql;
 import ConfigLog.ConfigLog;
-import Teste.ReceiverResult;
+import WriteTxt.WriteTxtAll;
+import WriteTxt.WriteTxtCS;
+import WriteTxt.WriteTxtRQ;
+import WriteTxt.WriteTxtSSQ;
 import com.google.gson.Gson;
 import eu.larkc.csparql.common.RDFTable;
 import eu.larkc.csparql.common.RDFTuple;
@@ -16,6 +19,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.slf4j.Logger;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -32,12 +36,19 @@ public class QueryCsparql {
     private MqttMessage msg = null;
     final private String TOPIC_RESPONSE = "responseQuery/";
     private String topic = null;
+    private WriteTxtAll writeTxtAll = new WriteTxtAll();
 
     public QueryCsparql(Query query) {
         topic = TOPIC_RESPONSE + query.getReturnCode();
         connect();
         configLog();
         startCsparql();
+        try {
+            new WriteTxtSSQ().setTimestamp(System.currentTimeMillis());
+        } catch (IOException e) {
+            e.printStackTrace();
+            logger.error("WRITETXT SSQ");
+        }
         query(query.getQuery(), query.getVar1(), query.getVar2());
     }
 
@@ -50,16 +61,16 @@ public class QueryCsparql {
     }
 
     public void query(String query, String var1, String var2) {
-        if (var1 != null && var2 != null){
-                engine.putStaticNamedModel(var1,var2);
-
+        if (var1 != null && var2 != null) {
+            engine.putStaticNamedModel(var1, var2);
         }
         try {
-            //csparqlQueryResult = engine.registerQuery(query, false);
-            //logger.debug("Query: {}", query);
-            //logger.debug("Query Start Time : {}", System.currentTimeMillis());
-
-
+            try {
+                new WriteTxtCS().setTimestamp(System.currentTimeMillis());
+            } catch (IOException e) {
+                e.printStackTrace();
+                logger.error("WRITETXT CS");
+            }
             csparqlQueryResult = engine.registerQuery(query, false);
             csparqlQueryResult.addObserver(new Observer() {
                 @Override
@@ -76,6 +87,12 @@ public class QueryCsparql {
                     ResponseQuery rq = new ResponseQuery();
                     rq.setObservable(o);
                     rq.setRdfTuples(rdfTuples);
+                    try {
+                        new WriteTxtCS().setTimestamp(System.currentTimeMillis());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        logger.error("WRITETXT CS");
+                    }
                     pubResponseQuery(rq);
                 }
             });
@@ -89,6 +106,12 @@ public class QueryCsparql {
     }
 
     public void pubResponseQuery(ResponseQuery rq) {
+        try {
+            new WriteTxtRQ().setTimestamp(System.currentTimeMillis());
+        } catch (IOException e) {
+            e.printStackTrace();
+            logger.error("WRITETXT RQ");
+        }
         Gson gson = new Gson();
         String m = gson.toJson(rq);
 
@@ -96,11 +119,18 @@ public class QueryCsparql {
         msg.setQos(2);
         msg.setRetained(false);
         msg.setPayload(m.getBytes());
+
         try {
             client.publish(topic, msg);
             logger.info("\n" + "Publish Response: " + topic);
         } catch (MqttException e) {
             e.printStackTrace();
+        }
+        try {
+            new WriteTxtRQ().setTimestamp(System.currentTimeMillis());
+        } catch (IOException e) {
+            e.printStackTrace();
+            logger.error("WRITETXT RQ");
         }
     }
 }

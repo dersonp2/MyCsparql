@@ -63,6 +63,7 @@ public class Main {
         SmartParking();
 
     }
+
     public static void basicRDF() {
         String query, query2, query3 = null;
         RdfStream rdfStream = null;
@@ -443,36 +444,57 @@ public class Main {
         Logger logger = LoggerFactory.getLogger(Main.class);
         OntologyPrefix p = new OntologyPrefix();
         try {
-            engine.putStaticNamedModel("http://mycsparql.lsdi/smartParking", CsparqlUtils.serializeRDFFile("examples_files/ParkingRDF.owl"));
+            engine.putStaticNamedModel("http://mycsparql.lsdi/smartParking", CsparqlUtils.serializeRDFFile("examples_files/DataSetParking.owl"));
             logger.info("SERIALIZOU O RDF");
         } catch (Exception e) {
             e.printStackTrace();
         }
+    String DeviceID = "";
 
         String query2 = "REGISTER QUERY MhubSemantic AS "
-                + "PREFIX pk:<" + p.getPk() + "> "
-                + "SELECT ?s "
-                + "FROM STREAM <"+ p.getPk() +"> [RANGE 5s STEP 5s] "
+                + "PREFIX pk:<http://www.lsdi.ufma.br/ontology/Parking#> "
+                + "SELECT ?space "
+                + "FROM STREAM <http://www.lsdi.ufma.br/ontology/Parking#> [RANGE 5s STEP 1s] "
                 + "FROM <http://mycsparql.lsdi/smartParking> "
                 + "WHERE { "
-                + "?s pk:hasState pk:Free ."
-                + "?s pk:hasVehicleSpace pk:CarSpace "
+                + "?space pk:hasState pk:Free ."
+                + "?nome pk:hasDevice pk:"+DeviceID+" ."
+                + "?nome pk:hasVehicle ?vehicle ."
+                + "?nome pk:hasPreferential ?prefe  rential ."
+                + "?vehicle pk:isAllowedVehicle ?vehicleSpace ."
+                + "?preferential pk:isAllowedPreferential ?preferentialSpace ."
+                + "?space pk:hasVehicleSpace ?vehicleSpace ."
+                + "?space pk:hasPreferentialSpace ?preferentialSpace "
                 + "} ";
 
-        ParkingStream parkingStream = new ParkingStream(p.getPk());
+        DatasetParking datasetParking = new DatasetParking("http://www.lsdi.ufma.br/ontology/Parking#");
 
-        engine.registerStream(parkingStream);
-        Thread fbThread = new Thread(parkingStream);
+        engine.registerStream(datasetParking);
+        Thread fbThread = new Thread(datasetParking);
         fbThread.start();
 
         try {
             CsparqlQueryResultProxy c = engine.registerQuery(query2, false);
             logger.debug("Query: {}", query2);
             logger.debug("Query Start Time : {}", System.currentTimeMillis());
-            c.addObserver(new ConsoleFormatter());
+            c.addObserver(new Observer() {
+                @Override
+                public void update(Observable o, Object arg) {
+                    ArrayList<RDFTuple> rdfTuples = new ArrayList();
+                    RDFTable q = (RDFTable) arg;
+                    Iterator i$ = q.iterator();
+
+                    while (i$.hasNext()) {
+                        RDFTuple t = (RDFTuple) i$.next();
+                        rdfTuples.add(t);
+                        System.out.println("Result: " + t.toString());
+                    }
+                }
+            });
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
     }
 
 

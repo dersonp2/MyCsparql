@@ -21,6 +21,8 @@ public class StaticModel {
         try {
             //engine.putStaticNamedModel(var1, var2); Modificar depois
             engine.putStaticNamedModel(var1, CsparqlUtils.serializeRDFFile(var2));
+            engine.putStaticNamedModel("http://mycsparql.lsdi/smartParking", CsparqlUtils.serializeRDFFile(
+                    "examples_files/ParkingRDF.owl"));
             //engine.putStaticNamedModel("http://mycsparql.lsdi/smartParking", CsparqlUtils.serializeRDFFile("examples_files/ParkingRDF.owl"));
             logger.info("Serializou RDF");
         }catch (Exception e){

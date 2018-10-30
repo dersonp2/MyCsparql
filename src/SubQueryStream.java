@@ -11,7 +11,7 @@ public class SubQueryStream {
         //SensorStream rdfStream = new SensorStream("http://mycsparql.lsdi/stream");
         //rdfStream.run();
         OntologyPrefix p = new OntologyPrefix();
-        ParkingStream parkingStream = new ParkingStream(p.getPk());
-        parkingStream.run();
+        //ParkingStream parkingStream = new ParkingStream(p.getPk());
+        //parkingStream.run();
     }
 }

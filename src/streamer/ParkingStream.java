@@ -25,30 +25,50 @@ public class ParkingStream extends RdfStream implements Runnable {
 
     @Override
     public void run() {
+
+        int[] iStates = new int[80];
+        String[] states = {"Busy", "Free"};
+        RdfQuadruple[] rdfQuadruple = new RdfQuadruple[80];
+        Random random = new Random();
+
+
+        for (int i = 0; i < iStates.length; i++) {
+            int index = random.nextInt(101) <= 15 ? 1 : 0;
+            iStates[i] = index;
+        }
+
         keepRunning = true;
-        while (keepRunning == true) {
+        while (keepRunning) {
 
             tempTS = System.currentTimeMillis();
 
-            String[] states = {"Busy", "Free"};
-            Random random = new Random();
-            int cont=0;
-            RdfQuadruple[] rdfQuadruple = new RdfQuadruple[80];
+            int cont = 0;
 
             for (int i = 0; i < rdfQuadruple.length; i++) {
-                int index = random.nextInt(101) <= 30 ? 1 : 0;
-                rdfQuadruple[i] = new RdfQuadruple(pk + "Space" + i, pk + "hasState", pk + states[index], tempTS);
-                //this.put(rdfQuadruple[i]);
-                if (index == 1) {
+                if (iStates[i] == 0) { /* O -> L */
+                    iStates[i] = random.nextInt(101) <= 1 ? 1 : 0;
+                } else { /* L -> O */
+                    iStates[i] = random.nextInt(101) <= 5 ? 0 : 1;
                     cont++;
                 }
+                rdfQuadruple[i] = new RdfQuadruple(pk + "Space" + i, pk + "hasState", pk + states[iStates[i]], tempTS);
+
             }
-            System.out.println("Vagas Livres: "+cont);
-            System.out.println("Vagas ocupadas: "+(80-cont)+"\n");
+            System.out.println("Vagas Livres: " + cont);
+            System.out.println("Vagas ocupadas: " + (80 - cont) + "\n");
 
             pubResult(rdfQuadruple);
+
             try {
-                Thread.sleep(5000);
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            
+            pubResult(rdfQuadruple);
+
+            try {
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -61,7 +81,6 @@ public class ParkingStream extends RdfStream implements Runnable {
         data.setRdfQuadruple(q);
         Gson gson = new Gson();
         String result = gson.toJson(data);
-
 
         MqttMessage msg = new MqttMessage((result).getBytes());
         msg.setQos(1);

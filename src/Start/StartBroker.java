@@ -3,6 +3,7 @@ package Start;
 import Communication.Communication;
 import ConfigLog.ConfigLog;
 import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence;
 import org.slf4j.Logger;
@@ -13,6 +14,7 @@ public class StartBroker {
     private static MqttClient client = null;
     private String tmpDir = System.getProperty("java.io.tmpdir");
     private MqttDefaultFilePersistence dataStore = new MqttDefaultFilePersistence(tmpDir);
+    MqttConnectOptions connOpt;
     //Logger
     private static Logger logger = null;
     //Variável Singleton
@@ -30,6 +32,12 @@ public class StartBroker {
     public MqttClient Connection(String clientId) {
         if (client == null) {
             try {
+                connOpt = new MqttConnectOptions();
+                connOpt.setCleanSession(true);
+                connOpt.setKeepAliveInterval(0);
+                connOpt.setUserName(null);
+                connOpt.setPassword(null);
+
                 client = new MqttClient(brokerUrl, clientId, dataStore);
                 client.setTimeToWait(0);
                 client.connect();
